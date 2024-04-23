@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/nav-bar.css">
+    <link rel="stylesheet" href="../css/mobile-nav-bar.css">
+    <script src="../js/ciphers/CipherFactory.js" defer></script>
+    <script src="../js/index.js" defer></script>
+    <title>About</title>
+</head>
+<body class="background-pages">
+    <nav>
+        <button class="nav-toggle" aria-label="toggle navigation" onclick="toggleNavItems()">
+            <span class="hamburger"></span>
+        </button>
+        <div id="logo">
+            <a href="../index.html">
+                <img src="../assets/logo.png" alt="About Us" class="logo-image">
+            </a>
+        </div>
+        <ul class="nav-items">
+            <li class="nav-item">
+                <a class="nav-item-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <div class="dropdown-btn" onclick="toggleDropdown(this)">
+                        <div>About</div>
+                        <div class="dropdown-icon">&#9660</div>
+                    </div>
+                    <div class="dropdown-items-container">
+                        <a href="./about.html" class="dropdown-item">About this website</a>
+                        <a href="./inspiration.html" class="dropdown-item">Design inspiration</a>
+                        <a href="./improvements.html" class="dropdown-item">Future improvements</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item-link" href="./contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <div class="dropdown-btn" onclick="toggleDropdown(this)">
+                        <div>All Ciphers</div>
+                        <div class="dropdown-icon">&#9660</div>
+                    </div>
+                    <div class="dropdown-items-container">
+                        <a href="./atbashCipher.html" class="dropdown-item">Atbash Cipher</a>
+                        <a href="./caesarCipher.html" class="dropdown-item">Caesar Cipher</a>
+                        <a href="./dancingMenCipher.html" class="dropdown-item">Dancing Men Cipher</a>
+                        <a href="./morseCode.html" class="dropdown-item">Morse Code</a>
+                        <a href="./railFenceCipher.html" class="dropdown-item">Rail Fence Cipher</a>
+                        <a href="./starWarsCipher.html" class="dropdown-item">Star Wars Cipher</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <ul class="nav-items-mobile"> 
+            <li class="nav-item-mobile">
+                <a class="nav-item-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item-mobile">
+                <a class="nav-item-link">About</a>
+                <ul class="sub-nav">
+                    <li><a href="./about.html">About this website</a></li>
+                    <li><a href="./inspiration.html">Design inspiration</a></li>
+                    <li><a href="./improvements.html">Future improvements</a></li>
+                </ul>
+            </li>
+            <li class="nav-item-mobile">
+                <a class="nav-item-link" href="./contact.html">Contact</a>
+            </li>
+            <li class="nav-item-mobile">
+                <a class="nav-item-link">Ciphers</a>
+                <ul class="sub-nav">
+                    <li><a href="./atbashCipher.html">Atbash Cipher</a></li>
+                    <li><a href="./caesarCipher.html">Caesar Cipher</a></li>
+                    <li><a href="./dancingMenCipher.html">Dancing Men Cipher</a></li>
+                    <li><a href="./morseCode.html">Morse Code</a></li>
+                    <li><a href="./railFenceCipher.html">Rail Fence Cipher</a></li>
+                    <li><a href="./starWarsCipher.html">Star Wars Cipher</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main class="about">
+        <div class="content-wrapper">
+            <div class="main-text">
+                <h1>About</h1>
+                <h3>Web Tech Module 2024</h3>
+                <p>
+                    This website was created for the module Web Technologies at Edinburgh Napier SET08401, 
+                    where the main aim is to use frontend technologies focusing in HTML, CSS, JavaScript.
+                    The goal of this project is to develop a website that not only allow users to engage with 
+                    functional ciphers, but also delivers an attractive and intuitive navigation for an enhanced
+                    user experience. This website, SECRETO, will focus on six different ciphers, three classical ones 
+                    (Atbash, Caesar, Rail Fence ciphers) and three fun ones related to symbolic substitution. The 
+                    selection of the three classical ciphers is grounded in their popular and well-established 
+                    structures, offering an existing solid foundation for classical cryptographic analysis.             
+                </p>
+
+                <h3>Design Inspiration</h3> 
+                <p>
+                    Dont't forget to check the design inspirations for this website. Click on the button to go see it!  
+                </p>                  
+                <a href="../pages/inspiration.html" class="button-link">Click here</a>
+            </div>
+            <img src="../assets/about-us.png" alt="About Us" class="responsive-image">
+        </div>
+        
+    </main>
+    <footer class="footer">
+        <p>© 2024 Nicole Soto</p>
+    </footer>
+</body>
+
+</html>
