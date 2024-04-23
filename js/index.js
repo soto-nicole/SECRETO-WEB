@@ -1,51 +1,6 @@
 const cipherFactory = new CipherFactory()
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    const navLinks = document.querySelectorAll('.nav-item-link'); 
-    const currentUrl = window.location.href; 
-
-    navLinks.forEach(link => {
-        if (link.href === currentUrl) {
-            link.classList.add('active'); 
-        }
-    });
-});
-
-
-let activeDropdown = null; 
-
-const toggleDropdown = (element) => {
-    const dropdownItemsContainer = element.nextElementSibling;
-    const dropdownIcon = element.querySelector('.dropdown-icon');
-
-    if (activeDropdown && activeDropdown !== dropdownItemsContainer) {
-        closeActiveDropdown(); 
-    }
-
-    dropdownIcon.classList.toggle("active-dropdown-button");
-    dropdownItemsContainer.classList.toggle("show-dropdown-items-container");
-
-    activeDropdown = dropdownItemsContainer.classList.contains("show-dropdown-items-container") ? dropdownItemsContainer : null;
-};
-
-
-
-const closeActiveDropdown = () => {
-    if (activeDropdown) {
-        const dropdownBtn = activeDropdown.previousElementSibling.querySelector('.dropdown-icon');
-        dropdownBtn.classList.remove("active-dropdown-button");
-        activeDropdown.classList.remove("show-dropdown-items-container");
-        activeDropdown = null;
-    }
-};
-document.addEventListener('click', function (event) {
-    if (activeDropdown && !activeDropdown.contains(event.target) && !activeDropdown.previousElementSibling.contains(event.target)) {
-        closeActiveDropdown();
-    }
-});
-
-
 
 const toggleSidebar = (element) => {
     element.classList.toggle("mirror-on-x-axis")
@@ -161,12 +116,6 @@ function handleCipherClick(event, url) {
 }
 
 
-function toggleNavItems() {
-    var body = document.body;
-    var navItems = document.querySelector('.nav-items-mobile');
-    navItems.classList.toggle('show-nav-items'); 
-    body.classList.toggle('lock-scroll'); 
-}
 
 
 function showModal() {
