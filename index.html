@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/nav-bar.css">
+    <link rel="stylesheet" href="css/mobile-nav-bar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/ciphers/CipherFactory.js" defer></script>
+    <script src="js/index.js" defer></script>
+    <title>Home</title>
+</head>
+<body class="gradient-bg">
+    <nav>
+        <button class="nav-toggle" aria-label="toggle navigation" onclick="toggleNavItems()">
+            <span class="hamburger"></span>
+        </button>
+        <div id="logo">
+            <a href="./index.html">
+                <img src="./assets/logo.png" alt="About Us" class="logo-image">
+            </a>
+        </div>
+        <ul class="nav-items">
+            <li class="nav-item">
+                <a class="nav-item-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <div class="dropdown-btn" onclick="toggleDropdown(this)">
+                        <div>About</div>
+                        <div class="dropdown-icon">&#9660</div>
+                    </div>
+                    <div class="dropdown-items-container">
+                        <a href="./pages/about.html" class="dropdown-item">About this website</a>
+                        <a href="./pages/inspiration.html" class="dropdown-item">Design inspiration</a>
+                        <a href="./pages/improvements.html" class="dropdown-item">Future improvements</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item-link" href="./pages/contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <div class="dropdown-btn" onclick="toggleDropdown(this)">
+                        <div>All Ciphers</div>
+                        <div class="dropdown-icon">&#9660</div>
+                    </div>
+                    <div class="dropdown-items-container">
+                        <a href="./pages/atbashCipher.html" class="dropdown-item">Atbash Cipher</a>
+                        <a href="./pages/caesarCipher.html" class="dropdown-item">Caesar Cipher</a>
+                        <a href="./pages/dancingMenCipher.html" class="dropdown-item">Dancing Men Cipher</a>
+                        <a href="./pages/morseCode.html" class="dropdown-item">Morse Code</a>
+                        <a href="./pages/railFenceCipher.html" class="dropdown-item">Rail Fence Cipher</a>
+                        <a href="./pages/starWarsCipher.html" class="dropdown-item">Star Wars Cipher</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <ul class="nav-items-mobile"> 
+            <li class="nav-item-mobile">
+                <a class="nav-item-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item-mobile">
+                <a class="nav-item-link">About</a>
+                <ul class="sub-nav">
+                    <li><a href="./pages/about.html">About this website</a></li>
+                    <li><a href="./pages/inspiration.html">Design inspiration</a></li>
+                    <li><a href="./pages/improvements.html">Future improvements</a></li>
+                </ul>
+            </li>
+            <li class="nav-item-mobile">
+                <a class="nav-item-link" href="./pages/contact.html">Contact</a>
+            </li>
+            <li class="nav-item-mobile">
+                <a class="nav-item-link">Ciphers</a>
+                <ul class="sub-nav">
+                    <li><a href="./pages/atbashCipher.html">Atbash Cipher</a></li>
+                    <li><a href="./pages/caesarCipher.html">Caesar Cipher</a></li>
+                    <li><a href="./pages/dancingMenCipher.html">Dancing Men Cipher</a></li>
+                    <li><a href="./pages/morseCode.html">Morse Code</a></li>
+                    <li><a href="./pages/railFenceCipher.html">Rail Fence Cipher</a></li>
+                    <li><a href="./pages/starWarsCipher.html">Star Wars Cipher</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main class="justify-centre align-centre flex-wrap">
+        <div class="main-page-content">
+            <h1 class="main-page-title">Welcome to <span>Secreto</span></h1>
+            <p class="main-page-description">Start exploring the enigma of cryptography using this platform by selecting one of the following six ciphers, each unveiling secrets on their dedicated page!</p>
+        </div>
+        <div class="main-page-nav">
+            <div class="central-nav-container">
+                <div id="left-column">                    
+                    <a href="#" id="dancing-men-cipher" class="column-item" onclick="handleCipherClick(event, './pages/dancingMenCipher.html')">
+                        <img src="./assets/dacing-men-icon.png" class="menu-icon" id="dancing-men-icon">
+                        <span>Dancing Men Cipher</span>
+                    </a>
+
+                    <a href="#" id="star-wars-cipher" class="column-item" onclick="handleCipherClick(event, './pages/starWarsCipher.html')">
+                        <img src="./assets/star-wars-icon.png" class="menu-icon" id="star-wars-icon">
+                        <span>Star Wars Cipher</span>
+                    </a>
+
+                    <a href="#" id="morse-code" class="column-item" onclick="handleCipherClick(event, './pages/morseCode.html')">
+                        <img src="./assets/morse-code-icon.png" class="menu-icon" id="morse-code">
+                        <span>Morse Code </span>
+                    </a>
+                    
+                </div>
+
+                <div id="centre-column">
+                    <img src="./assets/lock.png" id="lock-logo" onclick="toggleLock()">
+                </div>
+
+                <div id="right-column">
+                    <a href="#" id="rail-fence-cipher" class="column-item" onclick="handleCipherClick(event, './pages/railFenceCipher.html')">
+                        <img src="./assets/rail-fence-icon.png" class="menu-icon" id="rail-fence-cipher">
+                        <span>Rail Fence Cipher </span>
+                    </a>
+                    <a href="#" id="caesar-cipher" class="column-item" onclick="handleCipherClick(event, './pages/caesarCipher.html')">
+                        <img src="./assets/caesar-icon.png" class="menu-icon" id="caesar-cipher">
+                        <span>Caesar Cipher </span>
+                    </a>
+                    <a href="#" id="atbash-cipher" class="column-item" onclick="handleCipherClick(event, './pages/atbashCipher.html')">
+                        <img src="./assets/atbash-icon.png" class="menu-icon" id="atbash-cipher">
+                        <span>Atbash Cipher </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2024 Nicole Soto</p>
+    </footer>
+</body>
+</html>

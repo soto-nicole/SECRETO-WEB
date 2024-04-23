@@ -1,0 +1,292 @@
+@font-face {
+    font-family: "Dancing Men";
+    src: url("../assets/DancingMenSO.woff") format("woff");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    background: #ffffff;
+    font-size: 1.6rem;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: bold;
+}
+
+.gradient-bg {
+    background: linear-gradient(
+        165deg,
+        #3EB4C8 64%,
+        #ffffff 36%
+    );
+}
+
+.background-pages {
+    background: linear-gradient(
+        165deg,
+        #3EB4C8 64%,
+        #3EB4C8 36%
+    );
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex: 1;
+}
+
+.mirror-on-x-axis {
+    transform: scaleX(-1);
+}
+
+.justify-centre {
+    justify-content: center;
+}
+
+.align-centre {
+    align-items: center;
+    align-items: flex-start;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.main-page-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    padding: 1rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.main-page-title {
+    width: 100%;
+    padding: 1rem;
+    font-size: 5rem;
+}
+
+.main-page-title > span {
+    text-transform: uppercase;
+}
+
+.main-page-description {
+    font-size: 2rem;
+    line-height: 30px;
+    font-weight: normal;
+}
+
+
+#left-column {
+    width: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#centre-column {
+    width: 20%; 
+    height: 0; 
+    padding-top: 20%; 
+    position: relative;
+    border-radius: 50%;
+    background-color: #CFE3E6;
+    border: 3px solid black;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+#lock-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 70%; 
+    max-height: 70%; 
+    width: auto; 
+    height: auto; 
+    cursor: pointer;
+    transition: transform 0.6s ease;
+}
+
+.rotate {
+    animation: rotateImage 0.8s forwards;  
+}
+
+@keyframes rotateImage {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+#right-column {
+    width: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.column-item {
+    background: #ffffff;
+    padding: 1rem;
+    border: 0.2rem solid #000000;
+    border-radius: 3rem;
+    width: 700px;
+    text-align: center;
+    font-size: 1.8rem;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    text-decoration: none;
+    position: relative;
+}
+@media (max-width: 768px) {
+
+    html, body {
+        width: 100%; 
+        max-width: 100%; 
+        overflow-x: hidden; 
+    }
+    .main-page-title {
+        width: 100%;
+        padding: 1rem;
+        font-size: 3.3rem;
+    }
+    .main-page-description {
+        font-size: 1.7rem;
+        line-height: 24px;
+        font-weight: normal;
+    }
+    .main-page-content {
+        width: 100%; 
+        background-color: #3EB4C8; 
+        padding: 0.5rem; 
+        
+    }
+
+    #centre-column {
+        display: none; 
+    }
+   
+    body, .column-item {
+        font-size: 1.4rem; 
+        font-weight: bold; 
+    }
+   
+    .main-page-content, .column-item {
+        padding: 1rem; 
+        text-align: center; 
+        position: center;
+    }
+    .column-item {
+        padding: 1.5rem; 
+        min-height: 80px; 
+        width: 500px;
+        max-width:100%; 
+        margin: 10px 40px; 
+    }
+    .gradient-bg {
+        background: linear-gradient(
+            165deg,
+            #3EB4C8 64%,
+            #3EB4C8  36%
+        );
+    }
+
+    #star-wars-cipher {
+        left: 50%; 
+        transform: translateX(-123%);
+    }
+    #caesar-cipher {
+        right: auto; 
+        left: 30%; 
+        transform: translateX(-54%); 
+    }
+
+    #dancing-men-cipher {
+        position: relative;
+        z-index: 1000;  
+    }
+
+    #morse-code {
+        left:95%;
+        z-index: 1000;  
+
+    }
+
+}
+
+
+
+.column-item > span {
+    width: 100%;   
+}
+
+.column-item > img {
+    margin-left: 1rem;
+}
+
+#dancing-men-cipher {
+    left: 95%;
+}
+
+#star-wars-cipher {
+    left: 85%;
+}
+
+#morse-code {
+    left:95%;
+}
+
+#rail-fence-cipher {
+    right: 95%;
+}
+
+#caesar-cipher {
+    right: 85%;
+}
+
+#atbash-cipher {
+    right: 95%;
+}
+
+.dancing-men-font {
+    font-family: "Dancing Men";
+    font-size: 1.7rem;
+}
+
+.dancing-men-font::placeholder {
+    font-family: monospace;
+    font-size: 1.6rem;
+}
+
+
+.menu-icon {
+    width: 12%;
+    height: auto;
+    margin-right: 10px;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/nav-bar.css">
+    <link rel="stylesheet" href="../css/mobile-nav-bar.css">
+    <link rel="stylesheet" href="../css/contact.css">
+
+    <script src="../js/ciphers/CipherFactory.js" defer></script>
+    <script src="../js/index.js" defer></script>
+    <title>Contact</title>
+</head>
+<body class="background-pages">
+    <nav>
+        <button class="nav-toggle" aria-label="toggle navigation" onclick="toggleNavItems()">
+            <span class="hamburger"></span>
+        </button>
+        <div id="logo">
+            <a href="../index.html">
+                <img src="../assets/logo.png" alt="About Us" class="logo-image">
+            </a>
+        </div>
+        <ul class="nav-items">
+            <li class="nav-item">
+                <a class="nav-item-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <div class="dropdown-btn" onclick="toggleDropdown(this)">
+                        <div>About</div>
+                        <div class="dropdown-icon">&#9660</div>
+                    </div>
+                    <div class="dropdown-items-container">
+                        <a href="./about.html" class="dropdown-item">About this website</a>
+                        <a href="./inspiration.html" class="dropdown-item">Design inspiration</a>
+                        <a href="./improvements.html" class="dropdown-item">Future improvements</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item-link" href="./contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <div class="dropdown-btn" onclick="toggleDropdown(this)">
+                        <div>All Ciphers</div>
+                        <div class="dropdown-icon">&#9660</div>
+                    </div>
+                    <div class="dropdown-items-container">
+                        <a href="./atbashCipher.html" class="dropdown-item">Atbash Cipher</a>
+                        <a href="./caesarCipher.html" class="dropdown-item">Caesar Cipher</a>
+                        <a href="./dancingMenCipher.html" class="dropdown-item">Dancing Men Cipher</a>
+                        <a href="./morseCode.html" class="dropdown-item">Morse Code</a>
+                        <a href="./railFenceCipher.html" class="dropdown-item">Rail Fence Cipher</a>
+                        <a href="./starWarsCipher.html" class="dropdown-item">Star Wars Cipher</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <ul class="nav-items-mobile"> 
+            <li class="nav-item-mobile">
+                <a class="nav-item-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item-mobile">
+                <a class="nav-item-link">About</a>
+                <ul class="sub-nav">
+                    <li><a href="./about.html">About this website</a></li>
+                    <li><a href="./inspiration.html">Design inspiration</a></li>
+                    <li><a href="./improvements.html">Future improvements</a></li>
+                </ul>
+            </li>
+            <li class="nav-item-mobile">
+                <a class="nav-item-link" href="./contact.html">Contact</a>
+            </li>
+            <li class="nav-item-mobile">
+                <a class="nav-item-link">Ciphers</a>
+                <ul class="sub-nav">
+                    <li><a href="./atbashCipher.html">Atbash Cipher</a></li>
+                    <li><a href="./caesarCipher.html">Caesar Cipher</a></li>
+                    <li><a href="./dancingMenCipher.html">Dancing Men Cipher</a></li>
+                    <li><a href="./morseCode.html">Morse Code</a></li>
+                    <li><a href="./railFenceCipher.html">Rail Fence Cipher</a></li>
+                    <li><a href="./starWarsCipher.html">Star Wars Cipher</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="about">
+        <div class="content-wrapper">
+            <div class="main-text">
+                <h1>Contact Me</h1>
+                <p>If you have any questions, please don't hesitate to reach out. I'm here to help and look forward to hearing from you!</p>
+                <h3>University Email</h3>
+                <p>40626148@live.napier.ac.uk</p>
+                <h3>Phone Number</h3>
+                <p>+44 xxx xxx xxx</p>
+
+                <h3>Follow Me</h3>
+                <div class="social-links">
+                    <a href="https://twitter.com">
+                        <img src="../assets/twitter-icon.png" alt="Follow me on Twitter" class="social-icon">
+                    </a>
+                    <a href="https://linkedin.com">
+                        <img src="../assets/meta-icon.png" alt="Connect on LinkedIn" class="social-icon">
+                    </a>
+                    <a href="https://linkedin.com">
+                        <img src="../assets/linkedin-icon.png" alt="Connect on LinkedIn" class="social-icon">
+                    </a>
+                </div>
+            </div>
+            <img src="../assets/contact.png" alt="contact" class="responsive-image">
+
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <p>© 2024 Nicole Soto</p>
+    </footer>
+</body>
+</html>

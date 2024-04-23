@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/nav-bar.css">
+    <link rel="stylesheet" href="../css/mobile-nav-bar.css">
+    <script src="../js/ciphers/CipherFactory.js" defer></script>
+    <script src="../js/index.js" defer></script>
+    <title>Improvements</title>
+</head>
+<body class="background-pages">
+    <nav>
+        <button class="nav-toggle" aria-label="toggle navigation" onclick="toggleNavItems()">
+            <span class="hamburger"></span>
+        </button>
+        <div id="logo">
+            <a href="../index.html">
+                <img src="../assets/logo.png" alt="About Us" class="logo-image">
+            </a>
+        </div>
+        <ul class="nav-items">
+            <li class="nav-item">
+                <a class="nav-item-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <div class="dropdown-btn" onclick="toggleDropdown(this)">
+                        <div>About</div>
+                        <div class="dropdown-icon">&#9660</div>
+                    </div>
+                    <div class="dropdown-items-container">
+                        <a href="./about.html" class="dropdown-item">About this website</a>
+                        <a href="./inspiration.html" class="dropdown-item">Design inspiration</a>
+                        <a href="./improvements.html" class="dropdown-item">Future improvements</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item-link" href="./contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <div class="dropdown-btn" onclick="toggleDropdown(this)">
+                        <div>All Ciphers</div>
+                        <div class="dropdown-icon">&#9660</div>
+                    </div>
+                    <div class="dropdown-items-container">
+                        <a href="./atbashCipher.html" class="dropdown-item">Atbash Cipher</a>
+                        <a href="./caesarCipher.html" class="dropdown-item">Caesar Cipher</a>
+                        <a href="./dancingMenCipher.html" class="dropdown-item">Dancing Men Cipher</a>
+                        <a href="./morseCode.html" class="dropdown-item">Morse Code</a>
+                        <a href="./railFenceCipher.html" class="dropdown-item">Rail Fence Cipher</a>
+                        <a href="./starWarsCipher.html" class="dropdown-item">Star Wars Cipher</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <ul class="nav-items-mobile"> 
+            <li class="nav-item-mobile">
+                <a class="nav-item-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item-mobile">
+                <a class="nav-item-link">About</a>
+                <ul class="sub-nav">
+                    <li><a href="./about.html">About this website</a></li>
+                    <li><a href="./inspiration.html">Design inspiration</a></li>
+                    <li><a href="./improvements.html">Future improvements</a></li>
+                </ul>
+            </li>
+            <li class="nav-item-mobile">
+                <a class="nav-item-link" href="./contact.html">Contact</a>
+            </li>
+            <li class="nav-item-mobile">
+                <a class="nav-item-link">Ciphers</a>
+                <ul class="sub-nav">
+                    <li><a href="./atbashCipher.html">Atbash Cipher</a></li>
+                    <li><a href="./caesarCipher.html">Caesar Cipher</a></li>
+                    <li><a href="./dancingMenCipher.html">Dancing Men Cipher</a></li>
+                    <li><a href="./morseCode.html">Morse Code</a></li>
+                    <li><a href="./railFenceCipher.html">Rail Fence Cipher</a></li>
+                    <li><a href="./starWarsCipher.html">Star Wars Cipher</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main class="about">
+        <div class="content-wrapper">
+            <div class="main-text">
+                <h1>Future improvements</h1>
+                <h3>Help me improve this website!</h3>
+                <p>
+                    There is a serie of future improvements that could be applied to "Secreto", these range from
+                    adding the ability to sign in the website, to simple things like refactoring some of the code 
+                    to follow better practises. 
+                    Here is a list of current ideas that might improve this website: 
+                </p>
+
+                <ul>
+                    <li>Sign in: Might be beneficial to add authorisation and authentication to this website.</li>
+                    <li>Improve Dancing Men cipher: Right now the Dancing Men Cipher uses a font to satisfy the needs of encryption and decryption, 
+                        however, it would be desirable to have all the images for each dancing man as clickable so they 
+                        could populate the encrypted text to be decoded.</li>
+                    <li>Refactor some of the code to follow better practices: 
+                        Due to the time constraints of this project there are some code improvements that I would have liked to improve, 
+                        for instance sub-dividing the pages in different folders in the repo, adding a wiki to the repo, or even just follow better name conventions</li>
+                    <li>Add more visuals to the cipher pages: 
+                        Would be beneficial to add extra data, for example, how many letters are in the input or output of a cipher</li>
+                    <li>Add Contact me form, right now it's just university email but some users might benefit from just filling up a form</li>
+                </ul>
+            </div>
+            <iframe src="https://giphy.com/embed/TJgAunVZ6oUPTmhxI4" width="448" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/stickers/idea-verorodriguezcl-ampolleta-TJgAunVZ6oUPTmhxI4"></a></p>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2024 Nicole Soto</p>
+    </footer>
+</body>
+</html>
