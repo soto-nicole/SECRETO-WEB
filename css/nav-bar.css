@@ -1,0 +1,150 @@
+#logo {
+    width: 25%;
+    padding: 1.5rem;
+    margin-left: 3rem;
+    display: flex;
+    align-items: center; 
+}
+
+.logo-image {
+    width: auto;
+    max-height: 20px;
+    height: auto; 
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    width: 80%;
+    padding: 1rem;
+}
+
+.nav-item-link.active {
+    background-color: #3EB4C8; 
+    color: white; 
+    padding: 3px 10px; 
+    border-radius: 5px; 
+}
+
+.nav-item {
+    display: flex;
+    
+}
+
+.nav-item:hover {
+    cursor: pointer;
+}
+
+.nav-item-link {
+    text-decoration: none;
+    color: #000000;
+    display: block;
+}
+
+nav {
+    display: flex;
+    align-self: start;
+    align-items: center; 
+    width: 90%;
+    margin-top: 1.5rem;
+    border: 0.2rem solid #808080;
+    border-radius: 5rem;
+    font-size: 1.8rem;
+    background: #ffffff;
+}
+
+.main-page-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65%;
+    padding: 1rem;
+}
+
+.central-nav-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    user-select: none; /* Standard */
+    width: max-content;
+    width: 180px;
+}
+
+.dropdown-btn {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1rem;
+}
+
+.dropdown-icon {
+    display: flex;
+    align-self: start;
+    margin-left: 0.5rem;
+    padding: 0.3rem 0.5rem;
+    color: #ffffff;
+    background: #3EB4C8;
+    font-size: 1.4rem;
+    border-radius: 0 0.7rem 0.7rem 0;
+}
+
+.dropdown-items-container {
+    background: #FFFAF3;
+    visibility: hidden;
+    height: 0px;
+    border-radius: 1rem;
+}
+
+.dropdown-item {
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    padding: 1rem;
+}
+
+.dropdown-item:first-child {
+    border-radius: 1rem 1rem 0 0;
+}
+
+.dropdown-item:last-child {
+    border-radius: 0 0 1rem 1rem;
+}
+
+.dropdown-item:hover {
+    background: #EBB840;
+}
+
+.active-dropdown {
+    background: #EBB840;
+}
+
+.active-dropdown-button {
+    color: #EBB840;
+    background: #F4F4F4;
+}
+
+.show-dropdown-items-container {
+    visibility: visible;
+    height: auto;
+    position: absolute;
+    width: max-content;
+    margin-top: 0.2rem;
+    border: 0.1rem solid #808080;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .nav-items {
+        flex-direction: column;
+    }
+    .dropdown-items-container {
+        width: auto;
+    }
+}
