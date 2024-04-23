@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/error-message.css">
+    <link rel="stylesheet" href="../css/cipher.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/nav-bar.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/mobile-nav-bar.css">
+    <script src="../js/ciphers/CaesarCipher.js" defer></script>
+    <script src="../js/ciphers/CipherFactory.js" defer></script>
+    <script src="../js/index.js" defer></script>
+    <title>Caesar Cipher</title>
+</head>
+
+<body>
+    <nav>
+        <button class="nav-toggle" aria-label="toggle navigation" onclick="toggleNavItems()">
+            <span class="hamburger"></span>
+        </button>
+        <div id="logo">
+            <a href="../index.html">
+                <img src="../assets/logo.png" alt="About Us" class="logo-image">
+            </a>
+        </div>
+        <ul class="nav-items">
+            <li class="nav-item">
+                <a class="nav-item-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <div class="dropdown-btn" onclick="toggleDropdown(this)">
+                        <div>About</div>
+                        <div class="dropdown-icon">&#9660</div>
+                    </div>
+                    <div class="dropdown-items-container">
+                        <a href="./about.html" class="dropdown-item">About this website</a>
+                        <a href="./inspiration.html" class="dropdown-item">Design inspiration</a>
+                        <a href="./improvements.html" class="dropdown-item">Future improvements</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item-link" href="./contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <div class="dropdown-btn" onclick="toggleDropdown(this)">
+                        <div>All Ciphers</div>
+                        <div class="dropdown-icon">&#9660</div>
+                    </div>
+                    <div class="dropdown-items-container">
+                        <a href="./atbashCipher.html" class="dropdown-item">Atbash Cipher</a>
+                        <a href="./caesarCipher.html" class="dropdown-item">Caesar Cipher</a>
+                        <a href="./dancingMenCipher.html" class="dropdown-item">Dancing Men Cipher</a>
+                        <a href="./morseCode.html" class="dropdown-item">Morse Code</a>
+                        <a href="./railFenceCipher.html" class="dropdown-item">Rail Fence Cipher</a>
+                        <a href="./starWarsCipher.html" class="dropdown-item">Star Wars Cipher</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <ul class="nav-items-mobile">
+            <li class="nav-item-mobile">
+                <a class="nav-item-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item-mobile">
+                <a class="nav-item-link">About</a>
+                <ul class="sub-nav">
+                    <li><a href="./about.html">About this website</a></li>
+                    <li><a href="./inspiration.html">Design inspiration</a></li>
+                    <li><a href="./improvements.html">Future improvements</a></li>
+                </ul>
+            </li>
+            <li class="nav-item-mobile">
+                <a class="nav-item-link" href="./contact.html">Contact</a>
+            </li>
+            <li class="nav-item-mobile">
+                <a class="nav-item-link">Ciphers</a>
+                <ul class="sub-nav">
+                    <li><a href="./atbashCipher.html">Atbash Cipher</a></li>
+                    <li><a href="./caesarCipher.html">Caesar Cipher</a></li>
+                    <li><a href="./dancingMenCipher.html">Dancing Men Cipher</a></li>
+                    <li><a href="./morseCode.html">Morse Code</a></li>
+                    <li><a href="./railFenceCipher.html">Rail Fence Cipher</a></li>
+                    <li><a href="./starWarsCipher.html">Star Wars Cipher</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="sidebar">
+            <div class="sidebar-content-container">
+                <h2 class="sidebar-title">Summary</h2>
+                <p class="sidebar-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eos doloribus
+                    voluptates doloremque perferendis, quas eligendi sint, animi sapiente quo temporibus repellat
+                    fugiat. Nobis sequi id excepturi, quas mollitia perferendis expedita aperiam voluptates non iure
+                    dolorum, incidunt labore vitae? Tempora consectetur dignissimos cumque dicta assumenda! Consectetur
+                    blanditiis impedit labore tempore eius mollitia, magni nostrum expedita unde architecto magnam ullam
+                    vero iusto, numquam quisquam? Quod, culpa eligendi. Dolorem sit, tenetur distinctio quia aspernatur
+                    recusandae porro sint voluptatibus sunt? Dolore quibusdam error non autem repellat odit corrupti,
+                    optio animi dolor nam maiores ex nostrum cum est quaerat tempore inventore distinctio ut sunt!</p>
+                <h2 class="sidebar-title">How it works</h2>
+                <p class="sidebar-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia nobis vero
+                    rerum. Voluptatem rerum modi iure sit animi laborum aliquid reprehenderit natus veritatis autem
+                    ullam quibusdam, expedita labore sequi aperiam cupiditate omnis saepe est! Blanditiis aliquam et
+                    deserunt velit cum voluptatibus. Officiis culpa ad odio, laboriosam debitis reiciendis dolor id
+                    suscipit voluptatibus iusto officia exercitationem voluptate molestias magni voluptatem sequi
+                    nesciunt, quidem impedit sed tempora? Sit cumque soluta ipsum nemo quod, cupiditate perferendis
+                    pariatur animi alias, dolorum expedita suscipit! Culpa!</p>
+            </div>
+        </div>
+        <div class="learn-more-btn-container">
+            <div id="learn-more-btn">
+                <img src="../assets/right-arrow.png" id="learn-more-btn-arrow" onclick="toggleSidebar(this)">
+            </div>
+        </div>
+        <div class="outer-content-container">
+
+            <div id="error-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button">×</span>
+                    <p>Please insert a key value between 0 and 26</p>
+                </div>
+            </div>
+
+            <div class="inner-content-container">
+                <h1 class="cipher-name">Caesar Cipher</h1>
+                <div class="cipher-textarea-container">
+                    <div class="cipher-textarea-container-title">Plain Text</div>
+
+                    <textarea id="plain-text" class="cipher-textarea"
+                        placeholder="Insert here some text to encrypt....&#10;Or press blue button to generate random text"
+                        cols="30" rows="10"></textarea>
+                    <button id="gen-random-plain" class="random-cipher-btn" onclick="generateRandomPlainText()">
+                        <img src="../assets/random-btn.png" alt="Generate Random Text">
+                    </button>
+                </div>
+                <div class="cipher-btn-container">
+                    <button id="encrypt-btn" class="cipher-btn" name="caesar-cipher"
+                        onclick="encrypt(this)">Encrypt</button>
+                    <div id="arrows">
+                        <img id="left-arrow" class="arrow-img" src="../assets/curved-arrow.png">
+                        <img id="right-arrow" class="arrow-img" src="../assets/curved-arrow.png">
+                    </div>
+                    <button id="decrypt-btn" class="cipher-btn" name="caesar-cipher"
+                        onclick="decrypt(this)">Decrypt</button>
+                </div>
+                <div class="cipher-textarea-container">
+                    <div class="cipher-textarea-container-title">Cipher Text</div>
+                    <textarea id="cipher-text" class="cipher-textarea"
+                        placeholder="Insert here some text to encrypt....&#10;Or press blue button to generate random text"
+                        cols="30" rows="10"></textarea>
+                    <button id="gen-random-plain" class="random-cipher-btn"
+                        onclick="generateRandomCipherText('caesar-cipher')">
+                        <img src="../assets/random-btn.png" alt="Generate Random Text">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="cipher-input-container">
+            <label for="key-input">Key:</label>
+            <input id="key-input" class="cipher-input" type="number" min="0" max="26" required>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2024 Nicole Soto</p>
+    </footer>
+</body>
+
+</html>

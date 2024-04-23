@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/nav-bar.css">
+    <link rel="stylesheet" href="../css/mobile-nav-bar.css">
+    <script src="../js/ciphers/CipherFactory.js" defer></script>
+    <script src="../js/index.js" defer></script>
+    <title>Design inspiration</title>
+</head>
+<body class="background-pages">
+    <nav>
+        <button class="nav-toggle" aria-label="toggle navigation" onclick="toggleNavItems()">
+            <span class="hamburger"></span>
+        </button>
+        <div id="logo">
+            <a href="../index.html">
+                <img src="../assets/logo.png" alt="About Us" class="logo-image">
+            </a>
+        </div>
+        <ul class="nav-items">
+            <li class="nav-item">
+                <a class="nav-item-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <div class="dropdown-btn" onclick="toggleDropdown(this)">
+                        <div>About</div>
+                        <div class="dropdown-icon">&#9660</div>
+                    </div>
+                    <div class="dropdown-items-container">
+                        <a href="./about.html" class="dropdown-item">About this website</a>
+                        <a href="./inspiration.html" class="dropdown-item">Design inspiration</a>
+                        <a href="./improvements.html" class="dropdown-item">Future improvements</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item-link" href="./contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <div class="dropdown-btn" onclick="toggleDropdown(this)">
+                        <div>All Ciphers</div>
+                        <div class="dropdown-icon">&#9660</div>
+                    </div>
+                    <div class="dropdown-items-container">
+                        <a href="./atbashCipher.html" class="dropdown-item">Atbash Cipher</a>
+                        <a href="./caesarCipher.html" class="dropdown-item">Caesar Cipher</a>
+                        <a href="./dancingMenCipher.html" class="dropdown-item">Dancing Men Cipher</a>
+                        <a href="./morseCode.html" class="dropdown-item">Morse Code</a>
+                        <a href="./railFenceCipher.html" class="dropdown-item">Rail Fence Cipher</a>
+                        <a href="./starWarsCipher.html" class="dropdown-item">Star Wars Cipher</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <ul class="nav-items-mobile"> 
+            <li class="nav-item-mobile">
+                <a class="nav-item-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item-mobile">
+                <a class="nav-item-link">About</a>
+                <ul class="sub-nav">
+                    <li><a href="./about.html">About this website</a></li>
+                    <li><a href="./inspiration.html">Design inspiration</a></li>
+                    <li><a href="./improvements.html">Future improvements</a></li>
+                </ul>
+            </li>
+            <li class="nav-item-mobile">
+                <a class="nav-item-link" href="./contact.html">Contact</a>
+            </li>
+            <li class="nav-item-mobile">
+                <a class="nav-item-link">Ciphers</a>
+                <ul class="sub-nav">
+                    <li><a href="./atbashCipher.html">Atbash Cipher</a></li>
+                    <li><a href="./caesarCipher.html">Caesar Cipher</a></li>
+                    <li><a href="./dancingMenCipher.html">Dancing Men Cipher</a></li>
+                    <li><a href="./morseCode.html">Morse Code</a></li>
+                    <li><a href="./railFenceCipher.html">Rail Fence Cipher</a></li>
+                    <li><a href="./starWarsCipher.html">Star Wars Cipher</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+    <main class="about">
+        <div class="wrap-inspiration">
+            <div class="main-text">
+                <h1>Design Inspiration</h1>
+                <p>There area series of websites that inspired the colours, the cipher selection and some functionalies
+                    to go into SECRETO, there is the top 4 websites that I investigated the most through the design stage of this project.
+                </P>
+                <div class="websites-grid">
+                    <div class="website">
+                        <h2><a href="https://cryptii.com">1. Cryptii Website</a></h2>
+                        <p>"Cryptii” distinguishes itself due to the clean frontend design, presenting a well-organised 
+                            cipher’s library which are grouped by their different type. It provides a summary at the end 
+                            of each cipher’s page, which is useful, but there is not enough detail on this description or 
+                            even show how the cipher works. This served as inspiration for the side bar on each cipher on this website, 
+                            attempting provide more context to the user that is being first introduced to the cryptography. 
+                         </p>
+                        <img src="../assets/cryptii-web.png" alt="cryptii-web" class="web-image">
+                    </div>
+                    <div class="website">
+                        <h2><a href="https://www.cachesleuth.com/">2. CacheSleuth Website</a></h2>
+                        <p>"CacheSleuth" has a variety of unique and playful ciphers, including “Cow code”, “Flags”, “Dancing Men” from the Sherlock series, which 
+                            inspired the decision to choose the Dancing Men as one of the ciphers for this project.
+                        </p>
+                        <img src="../assets/cache-web.png" alt="cache-web" class="web-image">
+                    </div>
+                    <div class="website">
+                        <h2><a href="https://www.dcode.fr/">3. Dcode Website</a></h2>
+                        <p>“Dcode” offers a comprehensive range of features, including detailed information and 
+                            history for each cipher. However, this site’s outdated design and excessive pop-ups ads 
+                            compromise its navigability. This served as inspiration to provide a clean interface to the user
+                        </p>
+                        <img src="../assets/dcode-web.png" alt="dcode-web" class="web-image">
+                    </div>
+                    <div class="website">
+                        <h2><a href="https://crypto.interactive-maths.com/">4. CryptoCorner Website</a></h2>
+                        <p>
+                           "CryptoCorner" provides an extensive cipher information, from historical background to usage 
+                            instructions,early organised in its navigation bar. Each cipher has its own encrypt and 
+                            decrypt method, and something outstanding was the ability to display the grid in the Rail 
+                            Fence cipher. Something that I would have loved to implement if it wasn't for the time constraint,
+                            so it's added in the improvements section.
+                        </p>
+                        <img src="../assets/crypto-corner-web.png" alt="crypto-corner-web" class="web-image">
+                    </div>
+                </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2024 Nicole Soto</p>
+    </footer>
+</body>
+</html>
