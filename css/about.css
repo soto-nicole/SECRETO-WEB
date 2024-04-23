@@ -1,0 +1,173 @@
+/* TODO */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3EB4C8;
+}
+
+.content-wrapper {
+    margin-top: -300px; 
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 85%;
+    gap: 86px;
+    background: #f0f0f0;
+    border-radius: 75px;
+    border: 2px solid rgb(191, 186, 186);
+    padding: 4vw;
+}
+
+.wrap-inspiration {
+    margin-top: 30px; 
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 85%;
+    gap: 86px;
+    background: #f0f0f0;
+    border-radius: 75px;
+    border: 2px solid rgb(191, 186, 186);
+    padding: 4vw;
+}
+
+
+.main-text p, .main-text h1, .main-text h3 {
+    font-weight: normal;
+    margin: 10px 20px; 
+    line-height: 1.6;
+    text-align: justify;
+    padding: 0 10px; 
+}
+
+.main-text h1 {
+    background-color: rgba(203, 187, 52, 0.5);
+    margin-bottom: 50px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.main-text h3 {
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+.button-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #8a55aa;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 200px; 
+}
+
+.button-link:hover, .button-link:focus {
+    background-color: #bb44bb;
+    color: white;
+    outline: none;
+}
+
+
+
+
+
+.responsive-image {
+    max-width: 100%; 
+    height: auto;   
+    border-radius: 20px; 
+}
+ 
+
+
+.websites-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+    padding: 20px;
+}
+
+.website {
+    background: #f9f9f9;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.web-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.website h2 a {
+    display: inline-block; 
+    margin-left: 50px; 
+    color: black; 
+    text-decoration: none; 
+    transition: color 0.3s; 
+}
+
+.website h2 a:hover, .website h2 a:focus {
+    color: #8b1de2; 
+    text-decoration: underline; 
+}
+
+
+.main-text ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 20px 0; 
+
+}
+
+.main-text li {
+    background: #fff; 
+    margin-bottom: 10px; 
+    padding: 10px 15px; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15); 
+    font-family: Arial, sans-serif; 
+    font-size: 16px; 
+    font-weight: normal; 
+    font-style: normal; 
+    color: #333; 
+}
+
+.main-text li:not(:last-child) {
+    margin-bottom: 15px; 
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        gap: 20px;
+        padding: 5%;
+        border-radius: 20px;
+        margin-top: 10px;
+        width: 95%;
+        padding: 1vw;
+
+ 
+    }
+
+    .button-link {
+        display: block;
+        margin: 20px 30px;
+        text-align: center;
+    }
+
+    .websites-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .responsive-image {
+        display: block;
+        margin: 0 auto; 
+    }
+}
