@@ -229,13 +229,12 @@ main {
 
     #dancing-men-cipher {
         position: relative;
-        z-index: 1000;  
+        z-index: 1;  
     }
 
     #morse-code {
         left:95%;
-        z-index: 1000;  
-
+        z-index: 1;  
     }
 
 }
