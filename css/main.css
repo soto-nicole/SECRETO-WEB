@@ -1,10 +1,13 @@
+/* Ccustom font for Dancing Men */
 @font-face {
     font-family: "Dancing Men";
     src: url("../assets/DancingMenSO.woff") format("woff");
 }
 
+/* Imported Roboto Condensed font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
+/*Landing page: reset default margin, padding and box sizing*/
 * {
     margin: 0;
     padding: 0;
@@ -27,6 +30,7 @@ body {
     font-weight: bold;
 }
 
+/* Gradient background styles */
 .gradient-bg {
     background: linear-gradient(
         165deg,
@@ -66,6 +70,7 @@ main {
     flex-wrap: wrap;
 }
 
+/* Styles for main content */
 .main-page-content {
     display: flex;
     flex-wrap: wrap;
@@ -92,6 +97,7 @@ main {
 }
 
 
+/* The following are the columns styles for the landing page, left, right, center (which contains the lock image) */
 #left-column {
     width: 20%;
     display: flex;
@@ -164,82 +170,6 @@ main {
     text-decoration: none;
     position: relative;
 }
-@media (max-width: 768px) {
-
-    html, body {
-        width: 100%; 
-        max-width: 100%; 
-        overflow-x: hidden; 
-    }
-    .main-page-title {
-        width: 100%;
-        padding: 1rem;
-        font-size: 3.3rem;
-    }
-    .main-page-description {
-        font-size: 1.7rem;
-        line-height: 24px;
-        font-weight: normal;
-    }
-    .main-page-content {
-        width: 100%; 
-        background-color: #3EB4C8; 
-        padding: 0.5rem; 
-        
-    }
-
-    #centre-column {
-        display: none; 
-    }
-   
-    body, .column-item {
-        font-size: 1.4rem; 
-        font-weight: bold; 
-    }
-   
-    .main-page-content, .column-item {
-        padding: 1rem; 
-        text-align: center; 
-        position: center;
-    }
-    .column-item {
-        padding: 1.5rem; 
-        min-height: 80px; 
-        width: 500px;
-        max-width:100%; 
-        margin: 10px 40px; 
-    }
-    .gradient-bg {
-        background: linear-gradient(
-            165deg,
-            #3EB4C8 64%,
-            #3EB4C8  36%
-        );
-    }
-
-    #star-wars-cipher {
-        left: 50%; 
-        transform: translateX(-123%);
-    }
-    #caesar-cipher {
-        right: auto; 
-        left: 30%; 
-        transform: translateX(-54%); 
-    }
-
-    #dancing-men-cipher {
-        position: relative;
-        z-index: 1;  
-    }
-
-    #morse-code {
-        left:95%;
-        z-index: 1;  
-    }
-
-}
-
-
 
 .column-item > span {
     width: 100%;   
@@ -288,4 +218,81 @@ main {
     width: 12%;
     height: auto;
     margin-right: 10px;
+}
+
+
+
+@media (max-width: 768px) {
+
+    html, body {
+        width: 100%; 
+        max-width: 100%; 
+        overflow-x: hidden; 
+    }
+    .main-page-title {
+        width: 100%;
+        padding: 1rem;
+        font-size: 3.3rem;
+    }
+    .main-page-description {
+        font-size: 1.7rem;
+        line-height: 24px;
+        font-weight: normal;
+    }
+    .main-page-content {
+        width: 100%; 
+        background-color: #3EB4C8; 
+        padding: 0.5rem; 
+        
+    }
+
+    #centre-column {
+        display: none; 
+    }
+   
+    body, .column-item {
+        font-size: 1.4rem; 
+        font-weight: bold; 
+    }
+   
+    .main-page-content, .column-item {
+        padding: 1rem; 
+        text-align: center; 
+        position: center;
+    }
+    .column-item {
+        padding: 1.5rem; 
+        min-height: 80px; 
+        width: 500px;
+        max-width:100%; 
+        margin: 10px 40px; 
+    }
+    
+    .gradient-bg {
+        background: linear-gradient(
+            165deg,
+            #3EB4C8 64%,
+            #3EB4C8  36%
+        );
+    }
+
+    #dancing-men-cipher {
+        position: relative;
+        z-index: 1;  
+        transform: translateX(-14%); 
+    }
+
+    #morse-code {
+        left:95%;
+        z-index: 1;  
+        transform: translateX(-14%); 
+    }
+    
+    #rail-fence-cipher {
+        transform: translateX(14%); 
+    }
+    
+    #atbash-cipher {
+        transform: translateX(14%); 
+    }
 }
