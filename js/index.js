@@ -63,6 +63,33 @@ const decrypt = async (element) => {
         console.error("Decryption error:", error);
     }
 };
+function showGridModal() {
+    let modal = document.getElementById('grid-modal');
+    modal.style.display = 'block';
+
+}
+
+function closeGridModal() {
+    let modal = document.getElementById('grid-modal');
+    modal.style.display = 'none';
+}
+
+
+
+
+
+document.getElementById('display-grid-btn').addEventListener('click', function() {
+    cipher.displayGrid(document.getElementById('plain-text').value);
+});
+document.getElementsByClassName('close-button')[1].addEventListener('click', closeGridModal);
+
+
+
+
+
+
+
+
 
 
 async function generateRandomPlainText() {
