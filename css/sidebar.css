@@ -1,3 +1,9 @@
+/* Styling for side bar in cipher pages
+* The side bar consists of two components, one part that has the information/content from the ciphers, and the other part which is the arrow that
+* expands or collapses the side bar. Depending on which state the side bar is, the arrow will flip direction. 
+*/
+
+/*Side bar styling which is hidden by default*/
 .sidebar {
     width: 25%;
     height: calc(100vh - 138px);
@@ -8,12 +14,14 @@
     visibility: hidden;
     background: #E1DDDD;
     text-align: justify;
+    
 }
 
 .show-sidebar {
     visibility: visible;
 }
 
+/*Styling for content container, with everything aligned in the center*/
 .sidebar-content-container {
     display: flex;
     flex-wrap: wrap;
@@ -25,30 +33,38 @@
     text-align: center;
 }
 
+/*Styling for title container inside the information container*/
 .sidebar-title {
     width: 100%;
     margin: 0.5rem 0;
     padding: 1rem;
-    background: #ffffff;
+    background: #97d8e3;
+    border-radius: 10px; 
 }
 
+/*Styling for containers with information*/
 .sidebar-content {
     width: 100%;
     margin: 0.5rem 0;
     padding: 1rem;
     background: #ffffff;
     line-height: 22px;
+    border-radius: 10px;
+    font-weight: normal;
 }
 
+/*Styling for arrow button, this has an pulsation animation to attract user's attention*/
 .learn-more-btn-container {
     display: flex;
     align-items: center;
     justify-content: center;
     position: fixed;
-    height: 100%;
+    top: 108px;
+    height: calc(100vh - 138px); 
     width: 2%;
     border-radius: 0 2rem 0 0;
     background: #E1DDDD;
+    border-right: 3px solid #C0C0C0;
 }
 
 .shift-left {
@@ -65,36 +81,46 @@
     background: #E1DDDD;
 }
 
-
-
+/*pulsation animation*/
 #learn-more-btn-arrow {
     width: 100%;
     height: auto;
+    transition: transform 0.3s ease-in-out; 
+    animation: pulsate 2s infinite; 
 }
 
+/*the animation will stop once it's been hover over*/
 #learn-more-btn-arrow:hover {
     cursor: pointer;
+    animation: none; 
 }
 
+@keyframes pulsate {
+    0%, 100% {
+        transform: scale(1);  
+    }
+    50% {
+        transform: scale(1.5);  /*arrow gets 1.5 bigger in size than the original*/
+    }
+}
 
 @media (max-width: 768px) {
     .sidebar {
-        width: 75%; 
-        position: fixed; 
+        width: 75%;
         top: 73px;
         left: 0;
         z-index: 10;
         height: calc(100vh - 98px);
-
     }
 
     .learn-more-btn-container {
-        position: fixed;
-        top: 73px;
+        top: 73px; 
         left: 0%; 
-        height: calc(100vh - 98px);
         width: 5%;
+        height: calc(100vh - 98px); 
         z-index: 100;
     }
-  
+    .learn-more-btn-container {
+        border-right: none; 
+    }
 }

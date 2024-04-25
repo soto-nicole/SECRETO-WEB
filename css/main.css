@@ -29,7 +29,7 @@ body {
     font-weight: bold;
 
     /* here I'm making the background gradient and dynamic which will be displayed in the ciphers page */
-    background: linear-gradient(270deg, #dceaeb, #c499e3, #d5edf5, #e8e3f0);
+    background: linear-gradient(270deg, #dceaeb, #d3a9f1, #d5edf5, #e8e3f0);
     background-size: 400% 400%;
     animation: DynamicBackground 15s ease infinite;
 }
