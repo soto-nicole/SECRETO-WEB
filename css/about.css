@@ -1,39 +1,60 @@
+/* About page layout */
 .about {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #3EB4C8;
+    padding: 50px 0;
 }
 
+/* Container in the center */
 .content-wrapper {
-    margin-top: -300px; 
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: flex-start;
-    width: 85%;
-    gap: 86px;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto; 
     background: #f0f0f0;
-    border-radius: 75px;
+    border-radius: 20px;
+    padding: 3vw;
     border: 2px solid rgb(191, 186, 186);
-    padding: 4vw;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.wrap-inspiration {
-    margin-top: 30px; 
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: flex-start;
-    width: 85%;
-    gap: 86px;
-    background: #f0f0f0;
-    border-radius: 75px;
-    border: 2px solid rgb(191, 186, 186);
-    padding: 4vw;
+/* Text that is next to the image */
+.main-text {
+    flex: 1; /* allowing the container to be responsive */
+    max-width: 600px; 
+    padding: 1em;
 }
 
+/* responsive image next to the text */
+.responsive-image {
+    max-width: 40%; 
+    height: auto;
+    max-height: 400px; 
+    border-radius: 20px;
+}
 
+/* link button to the inspirations page */
+.button-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #8a55aa;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 45%;
+}
+
+/* change colour when hovering over */
+.button-link:hover, .button-link:focus {
+    background-color: #bb44bb;
+    color: white;
+    outline: none;
+}
+
+/* All text layout for headings and p  */
 .main-text p, .main-text h1, .main-text h3 {
     font-weight: normal;
     margin: 10px 20px; 
@@ -55,33 +76,21 @@
     font-weight: bold;
 }
 
-.button-link {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #8a55aa;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-left: 200px; 
+
+/*About page: design inpiration*/
+.wrap-inspiration {
+    margin-top: 30px; 
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 85%;
+    gap: 86px;
+    background: #f0f0f0;
+    border-radius: 75px;
+    border: 2px solid rgb(191, 186, 186);
+    padding: 4vw;
 }
-
-.button-link:hover, .button-link:focus {
-    background-color: #bb44bb;
-    color: white;
-    outline: none;
-}
-
-
-
-
-
-.responsive-image {
-    max-width: 100%; 
-    height: auto;   
-    border-radius: 20px; 
-}
- 
-
 
 .websites-grid {
     display: grid;
@@ -138,35 +147,30 @@
     color: #333; 
 }
 
-.main-text li:not(:last-child) {
-    margin-bottom: 15px; 
+
+
+@media (max-width: 1200px) { 
+    .responsive-image {
+        max-width: 50%;
+    }
 }
 
 @media (max-width: 768px) {
     .content-wrapper {
         flex-direction: column;
-        gap: 20px;
-        padding: 5%;
-        border-radius: 20px;
-        margin-top: 10px;
-        width: 95%;
-        padding: 1vw;
+        align-items: center; 
+    }
 
- 
+    .main-text, .responsive-image {
+        flex: 0 0 100%;
+    }
+
+    .main-text {
+        padding-right: 0; 
     }
 
     .button-link {
+        margin: 20px auto;
         display: block;
-        margin: 20px 30px;
-        text-align: center;
-    }
-
-    .websites-grid {
-        grid-template-columns: 1fr; 
-    }
-
-    .responsive-image {
-        display: block;
-        margin: 0 auto; 
     }
 }

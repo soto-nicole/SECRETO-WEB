@@ -51,6 +51,7 @@ nav {
     align-items: center; 
     width: 90%;
     margin-top: 1.5rem;
+    margin-bottom: 0px; 
     border: 0.2rem solid #808080;
     border-radius: 5rem;
     font-size: 1.8rem;
