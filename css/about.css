@@ -1,40 +1,60 @@
-/* TODO */
+/* About page layout */
 .about {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #3EB4C8;
+    padding: 50px 0;
 }
 
+/* Container in the center */
 .content-wrapper {
-    margin-top: -300px; 
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: flex-start;
-    width: 85%;
-    gap: 86px;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto; 
     background: #f0f0f0;
-    border-radius: 75px;
+    border-radius: 20px;
+    padding: 3vw;
     border: 2px solid rgb(191, 186, 186);
-    padding: 4vw;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.wrap-inspiration {
-    margin-top: 30px; 
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: flex-start;
-    width: 85%;
-    gap: 86px;
-    background: #f0f0f0;
-    border-radius: 75px;
-    border: 2px solid rgb(191, 186, 186);
-    padding: 4vw;
+/* Text that is next to the image */
+.main-text {
+    flex: 1; /* allowing the container to be responsive */
+    max-width: 600px; 
+    padding: 1rem;
 }
 
+/* responsive image next to the text */
+.responsive-image {
+    max-width: 40%; 
+    height: auto;
+    max-height: 400px; 
+    border-radius: 20px;
+}
 
+/* link button to the inspirations page */
+.button-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #8a55aa;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 45%;
+}
+
+/* change colour when hovering over */
+.button-link:hover, .button-link:focus {
+    background-color: #bb44bb;
+    color: white;
+    outline: none;
+}
+
+/* All text layout for headings and p  */
 .main-text p, .main-text h1, .main-text h3 {
     font-weight: normal;
     margin: 10px 20px; 
@@ -56,45 +76,61 @@
     font-weight: bold;
 }
 
-.button-link {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #8a55aa;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-left: 200px; 
+
+/*About page: design inpiration*/
+.wrap-inspiration {
+    margin-top: 30px; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 85%;
+    background: #f0f0f0;
+    border-radius: 20px;
+    border: 2px solid rgb(191, 186, 186);
+    padding: 4vw;
 }
 
-.button-link:hover, .button-link:focus {
-    background-color: #bb44bb;
-    color: white;
-    outline: none;
+.main-text-inspiration {
+    flex: 1;
+    padding: 1rem;
 }
 
-
-
-
-
-.responsive-image {
-    max-width: 100%; 
-    height: auto;   
-    border-radius: 20px; 
+/* All text layout for headings and p for the inpisration page following the about page */
+.main-text-inspiration p, .main-text-inspiration h1, .main-text-inspiration h3 {
+    font-weight: normal;
+    margin: 10px 20px; 
+    line-height: 1.6;
+    text-align: justify;
+    padding: 0 10px; 
 }
- 
 
+.main-text-inspiration h1 {
+    background-color: rgba(203, 187, 52, 0.5);
+    margin-bottom: 50px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
 
+.main-text-inspiration h3 {
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+/* Two columns grid to display the pages */
 .websites-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: repeat(2, 1fr); 
     gap: 20px;
     padding: 20px;
 }
 
+/* Each website and picture for each inspiration */
 .website {
     background: #f9f9f9;
     padding: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 15px rgba(0,0,0,0.1);
     border-radius: 8px;
 }
 
@@ -102,15 +138,12 @@
     width: 100%;
     height: auto;
     border-radius: 8px;
-    margin-top: 10px;
 }
 
-.website h2 a {
-    display: inline-block; 
-    margin-left: 50px; 
-    color: black; 
-    text-decoration: none; 
-    transition: color 0.3s; 
+.website h2, .website p {
+    font-size: calc(px + 1vmin);
+    line-height: 1.4;
+    margin: 10px 20px;
 }
 
 .website h2 a:hover, .website h2 a:focus {
@@ -119,11 +152,11 @@
 }
 
 
+/* different style for improvements page */
 .main-text ul {
     list-style-type: none; 
     padding: 0;
     margin: 20px 0; 
-
 }
 
 .main-text li {
@@ -139,35 +172,46 @@
     color: #333; 
 }
 
-.main-text li:not(:last-child) {
-    margin-bottom: 15px; 
+
+/* Added media queries for responsivity */
+
+@media (max-width: 1200px) { 
+    .responsive-image {
+        max-width: 50%;
+    }
 }
 
 @media (max-width: 768px) {
     .content-wrapper {
         flex-direction: column;
-        gap: 20px;
-        padding: 5%;
-        border-radius: 20px;
-        margin-top: 10px;
-        width: 95%;
-        padding: 1vw;
+        align-items: center;
+        width: 90%;
 
- 
+    }
+
+    .wrap-inspiration {
+        width: 90%;    
+    }
+    
+    .main-text, .responsive-image {
+        flex: 0 0 100%;
     }
 
     .button-link {
+        margin: 20px auto;
         display: block;
-        margin: 20px 30px;
-        text-align: center;
     }
 
     .websites-grid {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px;
+        padding: 0px; 
     }
+}
 
-    .responsive-image {
-        display: block;
-        margin: 0 auto; 
+@media (max-width: 600px) {
+    .websites-grid {
+        grid-template-columns: 1fr; 
     }
 }
