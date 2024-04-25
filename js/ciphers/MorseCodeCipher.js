@@ -23,8 +23,8 @@ class MorseCodeCipher {
             "(": "-.--.", ")" :"-.--.-"
         }
 
-        this.#dotSound = new Audio('../../assets/sounds/dot.mp3');
-        this.#dashSound = new Audio('../../assets/sounds/dash.mp3');
+        this.#dotSound = new Audio('/SECRETO-WEB/assets/sounds/dot.mp3');
+        this.#dashSound = new Audio('/SECRETO-WEB/assets/sounds/dash.mp3');
     }
 
     async playSound(morseCode) {
