@@ -25,7 +25,7 @@
 .main-text {
     flex: 1; /* allowing the container to be responsive */
     max-width: 600px; 
-    padding: 1em;
+    padding: 1rem;
 }
 
 /* responsive image next to the text */
@@ -81,28 +81,56 @@
 .wrap-inspiration {
     margin-top: 30px; 
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
     width: 85%;
-    gap: 86px;
     background: #f0f0f0;
-    border-radius: 75px;
+    border-radius: 20px;
     border: 2px solid rgb(191, 186, 186);
     padding: 4vw;
 }
 
+.main-text-inspiration {
+    flex: 1;
+    padding: 1rem;
+}
+
+/* All text layout for headings and p for the inpisration page following the about page */
+.main-text-inspiration p, .main-text-inspiration h1, .main-text-inspiration h3 {
+    font-weight: normal;
+    margin: 10px 20px; 
+    line-height: 1.6;
+    text-align: justify;
+    padding: 0 10px; 
+}
+
+.main-text-inspiration h1 {
+    background-color: rgba(203, 187, 52, 0.5);
+    margin-bottom: 50px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.main-text-inspiration h3 {
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+/* Two columns grid to display the pages */
 .websites-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: repeat(2, 1fr); 
     gap: 20px;
     padding: 20px;
 }
 
+/* Each website and picture for each inspiration */
 .website {
     background: #f9f9f9;
     padding: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 15px rgba(0,0,0,0.1);
     border-radius: 8px;
 }
 
@@ -110,15 +138,12 @@
     width: 100%;
     height: auto;
     border-radius: 8px;
-    margin-top: 10px;
 }
 
-.website h2 a {
-    display: inline-block; 
-    margin-left: 50px; 
-    color: black; 
-    text-decoration: none; 
-    transition: color 0.3s; 
+.website h2, .website p {
+    font-size: calc(px + 1vmin);
+    line-height: 1.4;
+    margin: 10px 20px;
 }
 
 .website h2 a:hover, .website h2 a:focus {
@@ -127,11 +152,11 @@
 }
 
 
+/* different style for improvements page */
 .main-text ul {
     list-style-type: none; 
     padding: 0;
     margin: 20px 0; 
-
 }
 
 .main-text li {
@@ -148,6 +173,7 @@
 }
 
 
+/* Added media queries for responsivity */
 
 @media (max-width: 1200px) { 
     .responsive-image {
@@ -158,19 +184,34 @@
 @media (max-width: 768px) {
     .content-wrapper {
         flex-direction: column;
-        align-items: center; 
+        align-items: center;
+        width: 90%;
+
     }
 
+    .wrap-inspiration {
+        width: 90%;    
+    }
+    
     .main-text, .responsive-image {
         flex: 0 0 100%;
-    }
-
-    .main-text {
-        padding-right: 0; 
     }
 
     .button-link {
         margin: 20px auto;
         display: block;
+    }
+
+    .websites-grid {
+        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px;
+        padding: 0px; 
+    }
+}
+
+@media (max-width: 600px) {
+    .websites-grid {
+        grid-template-columns: 1fr; 
     }
 }
