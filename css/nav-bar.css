@@ -1,3 +1,4 @@
+/* logo styling */
 #logo {
     width: 25%;
     padding: 1.5rem;
@@ -12,6 +13,7 @@
     height: auto; 
 }
 
+/* navigation styling */
 .nav-items {
     display: flex;
     justify-content: space-around;
@@ -20,6 +22,7 @@
     padding: 1rem;
 }
 
+.dropdown-btn.active, 
 .nav-item-link.active {
     background-color: #3EB4C8; 
     color: white; 
@@ -48,6 +51,7 @@ nav {
     align-items: center; 
     width: 90%;
     margin-top: 1.5rem;
+    margin-bottom: 0px; 
     border: 0.2rem solid #808080;
     border-radius: 5rem;
     font-size: 1.8rem;
@@ -67,6 +71,7 @@ nav {
     justify-content: center;
 }
 
+/* dropdown styling*/
 
 .dropdown {
     display: inline-block;
@@ -138,6 +143,7 @@ nav {
     margin-top: 0.2rem;
     border: 0.1rem solid #808080;
     width: 100%;
+    z-index: 100;
 }
 
 @media (max-width: 768px) {

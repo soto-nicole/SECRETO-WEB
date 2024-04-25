@@ -1,3 +1,4 @@
+/*mobile nav bar, initially hide it*/
 .nav-toggle {
     display: none;
     background: none;
@@ -7,6 +8,7 @@
     z-index: 1001; 
 }
 
+/*hamburger menu*/
 .hamburger {
     display: block;
     width: 30px;
@@ -16,13 +18,16 @@
     transition: all 0.3s ease;
 }
 
+/*hide the navigation items */
 .nav-items-mobile {
     display: none;
     list-style-type: none;
     padding: 0;
 }
 
+
 @media (max-width: 768px) {
+
     .nav-toggle {
         display: block;
     }
@@ -48,9 +53,9 @@
         z-index: 1000;
         overflow-y: auto; 
     }
-
+    
     .show-nav-items {
-        display: flex;
+        display: flex; 
     }
 
     .nav-item-mobile {
