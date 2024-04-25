@@ -1,8 +1,11 @@
+/* button to random generate text */
 .random-cipher-btn {
     padding-top: 0px;  
     border: none;
     background: none;
 }
+
+/* pointer when hovering over the randon generator btn */
 .random-cipher-btn:hover {
     cursor: pointer;
 }
@@ -15,6 +18,7 @@
     margin-bottom: 6px;  
 }
 
+/* page layout for the plain and cipher text */
 .outer-content-container {
     display: flex;
     flex: 1 1 auto;
@@ -22,7 +26,6 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-
 }
 
 .inner-content-container {
@@ -34,6 +37,7 @@
     padding: 1rem;
 }
 
+/* cipher name container */
 .cipher-name {
     width: 100%;
     text-align: center;
@@ -45,6 +49,7 @@
     font-size: 3.2rem;
 }
 
+/* boxes that contain the text area for the ciphers */
 .cipher-textarea-container {
     display: flex;
     flex-wrap: wrap;
@@ -58,6 +63,7 @@
     position: relative;
 }
 
+/* styling for the title of the container */
 .cipher-textarea-container-title {
     width: 30%;
     position: absolute;
@@ -71,7 +77,7 @@
     font-weight: bold;
 }
 
-
+/* styling text area where text input will go */
 .cipher-textarea {
     display: block;
     resize: none;
@@ -90,6 +96,7 @@
     box-shadow: none;
 }
 
+/* Styling the encrypt and decrypt button */
 .cipher-btn-container {
     display: flex;
     width: 100%;
@@ -104,9 +111,9 @@
     padding: 1rem;
     font-size: 1.5rem;
     border-radius: 3rem;
-    background-color: #624CC1;
+    background-color: #553bc8;
     background-image: linear-gradient(180deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, 0));
-    border: 1px solid #624CC1;
+    border: 1px solid #553bc8;
     color: #ffffff;
     font-weight: bold;
 }
@@ -120,6 +127,7 @@
     box-shadow: rgba(46, 54, 80, 0.125) 0 3px 5px inset;
 }
 
+/* Styling the Key input value for ciphers rail fence and caesar */
 .cipher-input-container {
     position: fixed;
     right: 270px;  
@@ -138,7 +146,6 @@
     align-items: center;
 }
 
-
 .cipher-input {
     width: 100%;
     padding: 8px;
@@ -147,6 +154,7 @@
     border-radius: 4px;
 }
 
+/* styling arrow icons */
 #arrows {
     display: flex;
     width: 20%;
@@ -158,7 +166,6 @@
     width: 40%;
     height: auto;
 }
-
 
 #left-arrow {
     rotate: -40deg;
@@ -179,27 +186,22 @@
     }
 
     .inner-content-container {
-        width: 90%; 
+        width: 92%; 
         flex-direction: column;
         align-items: center;
     }
-
-    .cipher-textarea-container-title {
-        font-size: 1rem; 
+        
+    .cipher-name {
+        font-size: 1.2rem; 
         padding: 0.8rem; 
+        width: 100%;
     }
 
-    
-    .cipher-name {
+    .cipher-textarea-container-title {
         font-size: 1.2rem; 
         padding: 0.8rem; 
     }
 
-    .cipher-textarea-container,
-    .cipher-btn-container {
-        width: 100%; 
-         align-items: center;
-    }
 
     .cipher-textarea {
         font-size: 1.4rem; 
@@ -228,5 +230,6 @@
         font-size: 12px;
         border: 1px solid #ccc;
     }
+
 
 }

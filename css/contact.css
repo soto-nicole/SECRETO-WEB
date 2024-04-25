@@ -1,3 +1,4 @@
+/*Styling for icons in the contact me page*/
 .social-links {
     display: flex;
     justify-content: center;
@@ -9,7 +10,6 @@
 .social-links a {
     margin: 0 25px; 
     text-decoration: none;
-    color: inherit;
 }
 
 .social-icon {

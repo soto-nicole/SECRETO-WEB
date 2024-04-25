@@ -105,6 +105,7 @@
     padding: 0 10px; 
 }
 
+/*heading 1 for the inspiration page*/
 .main-text-inspiration h1 {
     background-color: rgba(203, 187, 52, 0.5);
     margin-bottom: 50px;
@@ -113,6 +114,7 @@
     border-radius: 8px;
 }
 
+/*heading 3 for the inspiration page*/
 .main-text-inspiration h3 {
     margin-top: 40px;
     font-weight: bold;
