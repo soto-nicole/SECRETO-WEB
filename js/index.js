@@ -63,6 +63,7 @@ const decrypt = async (element) => {
         console.error("Decryption error:", error);
     }
 };
+
 function showGridModal() {
     let modal = document.getElementById('grid-modal');
     modal.style.display = 'block';

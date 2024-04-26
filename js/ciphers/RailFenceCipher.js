@@ -119,20 +119,21 @@ for (let i = 0, len = plainText.length; i < len; i++) {
     }
 }
 
-    rails.forEach(rail => {
-        let rowDiv = document.createElement('div');
-        rowDiv.className = 'grid-row';
-        rail.forEach(cellChar => {
-            let cellSpan = document.createElement('span');
-            cellSpan.className = 'grid-cell';
-            cellSpan.textContent = cellChar.trim();
-            rowDiv.appendChild(cellSpan);
-        });
-        gridContainer.appendChild(rowDiv);
+rails.forEach(rail => {
+    let rowDiv = document.createElement('div');
+    rowDiv.className = 'grid-row';
+    rail.forEach(cellChar => {
+        let cellSpan = document.createElement('span');
+        cellSpan.className = 'grid-cell';
+        cellSpan.textContent = cellChar.trim();
+
+        if (cellChar.trim() !== '') {
+            cellSpan.classList.add('grid-cell-letter'); 
+        }
+
+        rowDiv.appendChild(cellSpan);
     });
-}
-
-
-
-
+    gridContainer.appendChild(rowDiv);
+});
+  }
 }
