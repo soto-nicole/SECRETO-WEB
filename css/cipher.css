@@ -130,9 +130,8 @@
 /* Styling the Key input value for ciphers rail fence and caesar */
 .cipher-input-container {
     position: fixed;
-    right: 270px;  
+    right: 10%;  
     top: 50%;
-    transform: translateY(60%);
     width: 200px;
     padding: 10px;
     background-color: #ECE7FF;
@@ -219,7 +218,7 @@
         right: 50%;  
         top: 50%; 
         padding: 2%;
-        transform: translate(160%, 55%); 
+        transform: translate(215%, 170%); 
         font-size: 11px;
         z-index: 0;
     }
@@ -232,4 +231,18 @@
     }
 
 
+}
+
+@media (max-width: 328px) {
+
+    .cipher-input-container {
+        position: fixed;
+        width: 100px;
+        right: 50%;  
+        top: 50%; 
+        padding: 2%;
+        transform: translate(140%, 270%); 
+        font-size: 11px;
+        z-index: 0;
+    }
 }
