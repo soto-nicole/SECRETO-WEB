@@ -152,6 +152,11 @@ function handleCipherClick(event, url) {
 }
 
 
+function handleKeyPress(event) {
+    if (event.keyCode === 13 || event.keyCode === 32) { 
+        toggleLock();
+    }
+}
 
 
 function showModal() {
