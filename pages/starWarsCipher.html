@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linking to external CSS files for styling different components of the page -->
     <link rel="stylesheet" href="../css/cipher.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/about.css">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="../css/nav-bar.css">
     <link rel="stylesheet" href="../css/sidebar.css">
     <link rel="stylesheet" href="../css/mobile-nav-bar.css">
+    <!-- JavaScript files with defer attribute to ensure they load after the HTML is parsed -->
     <script src="../js/nav/index.js" defer></script>
     <script src="../js/ciphers/StarWarsCipher.js" defer></script>
     <script src="../js/ciphers/CipherFactory.js" defer></script>
@@ -19,6 +21,7 @@
 </head>
 
 <body>
+    <!-- Nav is the navigation bar which also includes the mobile nav bar -->
     <nav>
         <button class="nav-toggle" aria-label="toggle mobile navigation" onclick="toggleNavItems()">
             <svg width="40px" height="35px" viewBox="0 0 24 24" fill="#0c5e6c">
@@ -97,6 +100,7 @@
         </ul>
     </nav>
     <main>
+        <!-- Side bar container for learn more information -->
         <div class="sidebar">
             <div class="sidebar-content-container">
                 <h2 class="sidebar-title">Summary</h2>
@@ -116,7 +120,8 @@
                     <img src="../assets/star-picture.png" alt="Star Wars Cipher Picture" class="responsive-img">
                 </p>
                 <p class="sidebar-content">
-                    Don't forget to put your volume up to listen to the encrypted message... read out loud by C-3PO &#128514!
+                    Don't forget to put your volume up to listen to the encrypted message... read out loud by C-3PO
+                    &#128514!
                 </p>
                 <h2 class="sidebar-title">References</h2>
                 <p class="sidebar-content">
@@ -131,6 +136,7 @@
                     onkeydown="handleKeyPress(event)" role="button" tabindex="0" alt="Expand to read">
             </div>
         </div>
+        <!-- ciphers interaction -->
         <div class="outer-content-container">
             <div class="inner-content-container">
                 <h1 class="cipher-name">Star Wars Cipher</h1>
@@ -167,6 +173,7 @@
             </div>
         </div>
     </main>
+    <!-- Footer information -->
     <footer class="footer">
         <p>© 2024 Nicole Soto</p>
     </footer>

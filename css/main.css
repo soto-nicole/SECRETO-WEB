@@ -34,49 +34,66 @@ body {
     animation: DynamicBackground 15s ease infinite;
 }
 
-/* keyframes for dynamic background */
+/* keyframes for dynamic background
+* Reference: https://stackoverflow.com/questions/76015744/background-position-property-does-not-work-inside-keyframes-tailwind-config-fi
+*/
+
 @keyframes DynamicBackground {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Gradient background styles */
 .gradient-bg {
-    background: linear-gradient(
-        165deg,
-        #3EB4C8 64%,
-        #ffffff 36%
-    );
+    background: linear-gradient(165deg,
+            #3EB4C8 64%,
+            #ffffff 36%);
 }
 
+/* Applies a diagonal linear gradient background to elements with this class */
 .background-pages {
-    background: linear-gradient(
-        165deg,
-        #3EB4C8 64%,
-        #3EB4C8 36%
-    );
+    background: linear-gradient(165deg,
+            /* Angle of the gradient */
+            #3EB4C8 64%,
+            /* Start color stops at 64% */
+            #3EB4C8 36%
+            /* End color stops at 36% */
+        );
 }
 
+/* Style rules for main element, setting up a flexible box layout */
 main {
     width: 100%;
     display: flex;
     flex: 1;
 }
 
+/* Applies a mirror effect horizontally across the X-axis */
 .mirror-on-x-axis {
-    transform: scaleX(-1);
+    transform: scaleX(-1); /* Flips/mirrors the element horizontally */
 }
 
+/* Centers child elements horizontally within a flex container */
 .justify-centre {
     justify-content: center;
 }
 
+/* Centers child elements vertically within a flex container, overrides previous alignment */
 .align-centre {
     align-items: center;
     align-items: flex-start;
 }
 
+/* Allows multiple flex items to wrap onto multiple lines */
 .flex-wrap {
     flex-wrap: wrap;
 }
@@ -91,13 +108,14 @@ main {
     color: #ffffff;
 }
 
+/* Specific styling for titles within the main content */
 .main-page-title {
     width: 100%;
     padding: 1rem;
     font-size: 5rem;
 }
 
-.main-page-title > span {
+.main-page-title>span {
     text-transform: uppercase;
 }
 
@@ -118,10 +136,11 @@ main {
     position: relative;
 }
 
+/* Styling for a center column, often used for visually distinctive content such as logos */
 #centre-column {
-    width: 20%; 
-    height: 0; 
-    padding-top: 20%; 
+    width: 20%;
+    height: 0;
+    padding-top: 20%;
     position: relative;
     border-radius: 50%;
     background-color: #CFE3E6;
@@ -130,27 +149,31 @@ main {
     margin: auto;
 }
 
+/* Styles specific to the logo within the center column */
 #lock-logo {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 70%; 
-    max-height: 70%; 
-    width: auto; 
-    height: auto; 
+    max-width: 70%;
+    max-height: 70%;
+    width: auto;
+    height: auto;
     cursor: pointer;
     transition: transform 0.6s ease;
 }
 
+/* Applies a rotation animation to elements with the .rotate class */
 .rotate {
-    animation: rotateImage 0.8s forwards;  
+    animation: rotateImage 0.8s forwards;
 }
 
+/* Defines the keyframes for the rotateImage animation */
 @keyframes rotateImage {
     from {
         transform: translate(-50%, -50%) rotate(0deg);
     }
+
     to {
         transform: translate(-50%, -50%) rotate(360deg);
     }
@@ -182,11 +205,11 @@ main {
     position: relative;
 }
 
-.column-item > span {
-    width: 100%;   
+.column-item>span {
+    width: 100%;
 }
 
-.column-item > img {
+.column-item>img {
     margin-left: 1rem;
 }
 
@@ -199,7 +222,7 @@ main {
 }
 
 #morse-code {
-    left:95%;
+    left: 95%;
 }
 
 #rail-fence-cipher {
@@ -235,75 +258,80 @@ main {
 
 @media (max-width: 768px) {
 
-    html, body {
-        width: 100%; 
-        max-width: 100%; 
-        overflow-x: hidden; 
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
     }
+
     .main-page-title {
         width: 100%;
         padding: 1rem;
         font-size: 3.3rem;
     }
+
     .main-page-description {
         font-size: 1.7rem;
         line-height: 24px;
         font-weight: normal;
     }
+
     .main-page-content {
-        width: 100%; 
-        background-color: #3EB4C8; 
-        padding: 0.5rem; 
-        
+        width: 100%;
+        background-color: #3EB4C8;
+        padding: 0.5rem;
+
     }
 
     #centre-column {
-        display: none; 
+        display: none;
     }
-   
-    body, .column-item {
-        font-size: 1.4rem; 
-        font-weight: bold; 
+
+    body,
+    .column-item {
+        font-size: 1.4rem;
+        font-weight: bold;
     }
-   
-    .main-page-content, .column-item {
-        padding: 1rem; 
-        text-align: center; 
+
+    .main-page-content,
+    .column-item {
+        padding: 1rem;
+        text-align: center;
         position: center;
     }
+
     .column-item {
-        padding: 1.5rem; 
-        min-height: 80px; 
+        padding: 1.5rem;
+        min-height: 80px;
         width: 500px;
-        max-width:100%; 
-        margin: 10px 40px; 
+        max-width: 100%;
+        margin: 10px 40px;
     }
-    
+
     .gradient-bg {
-        background: linear-gradient(
-            165deg,
-            #3EB4C8 64%,
-            #3EB4C8  36%
-        );
+        background: linear-gradient(165deg,
+                #3EB4C8 64%,
+                #3EB4C8 36%);
     }
 
     #dancing-men-cipher {
         position: relative;
-        z-index: 1;  
-        transform: translateX(-14%); 
+        z-index: 1;
+        transform: translateX(-14%);
     }
 
     #morse-code {
-        left:95%;
-        z-index: 1;  
-        transform: translateX(-14%); 
+        left: 95%;
+        z-index: 1;
+        transform: translateX(-14%);
     }
-    
+
     #rail-fence-cipher {
-        transform: translateX(14%); 
+        transform: translateX(14%);
     }
-    
+
     #atbash-cipher {
-        transform: translateX(14%); 
+        transform: translateX(14%);
     }
 }

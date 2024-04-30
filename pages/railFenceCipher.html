@@ -101,6 +101,7 @@
         </ul>
     </nav>
     <main>
+        <!-- side bar for learn more information -->
         <div class="sidebar">
             <div class="sidebar-content-container">
                 <h2 class="sidebar-title">Summary</h2>
@@ -147,7 +148,8 @@
                 </p>
                 <h2 class="sidebar-title">References</h2>
                 <p class="sidebar-content">
-                    [1] Wikipedia, <a href="https://en.wikipedia.org/wiki/Rail_fence_cipher" target="_blank">"Rail Fence Cipher"</a> - Online source.<br>
+                    [1] Wikipedia, <a href="https://en.wikipedia.org/wiki/Rail_fence_cipher" target="_blank">"Rail Fence
+                        Cipher"</a> - Online source.<br>
                     [1] Cryptop Corner, <a href="https://crypto.interactive-maths.com/rail-fence-cipher.html"
                         target="_blank">"Rail Fence Cipher"</a> - Online source.
                 </p>
@@ -159,8 +161,9 @@
                     onkeydown="handleKeyPress(event)" role="button" tabindex="0" alt="Expand to read">
             </div>
         </div>
-
+        <!-- ciphers interaction -->
         <div class="outer-content-container">
+            <!-- Modal to add validation in case no key is input-->
             <div id="error-modal" class="modal">
                 <div class="modal-content">
                     <span class="close-button">×</span>
@@ -179,6 +182,7 @@
                         <img src="../assets/random-btn.png" alt="Generate Random Text">
                     </button>
                 </div>
+                <!-- encryption and decryption logic -->
                 <div class="cipher-btn-container">
                     <button id="encrypt-btn" class="cipher-btn" name="rail-fence-cipher"
                         onclick="encrypt(this)">Encrypt</button>
@@ -201,6 +205,7 @@
                 </div>
             </div>
         </div>
+        <!-- add modal to show the rail fence grid modal and x to close it -->
         <div class="cipher-input-container">
             <label for="key-input">Rail Number:</label>
             <input type="number" id="key-input" class="cipher-input" min="2" value="3">
@@ -214,6 +219,7 @@
             </div>
         </div>
     </main>
+    <!-- footer information -->
     <footer class="footer">
         <p>© 2024 Nicole Soto</p>
     </footer>

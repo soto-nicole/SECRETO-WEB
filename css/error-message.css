@@ -1,3 +1,4 @@
+/* Style rules for the modal overlay */
 .modal {
     display: none; 
     position: fixed; 
@@ -11,6 +12,7 @@
     background-color: rgba(0,0,0,0.4); 
 }
 
+/* Style rules for the content box within the modal */
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto;
@@ -19,6 +21,7 @@
     width: 80%; 
 }
 
+/* Style rules for the close button inside the modal */
 .close-button {
     color: #aaa;
     float: right;
@@ -26,6 +29,7 @@
     font-weight: bold;
 }
 
+/* Hover and focus styles for the close button to enhance usability */
 .close-button:hover,
 .close-button:focus {
     color: black;

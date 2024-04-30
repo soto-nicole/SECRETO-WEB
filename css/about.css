@@ -188,7 +188,6 @@
 
 
 /* Added media queries for responsivity */
-
 @media (max-width: 1200px) { 
     .responsive-image {
         max-width: 50%;

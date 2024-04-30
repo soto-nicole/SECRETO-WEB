@@ -7,22 +7,26 @@
     margin: 20px 0;
 }
 
+/* Styles for anchor tags within the .social-links container */
 .social-links a {
     margin: 0 25px; 
     text-decoration: none;
 }
 
+/* Styling for social media icons */
 .social-icon {
     height: 40px; 
     width: auto; 
 }
 
+/* Specific styles for GitHub link in the contact page */
 .github-link {
     color: #0c5e6c; 
     text-decoration: none; 
     font-weight: bold; 
 }
 
+/* Hover state styles for the GitHub link */
 .github-link:hover {
     text-decoration: underline; 
 }

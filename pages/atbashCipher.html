@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linking to external CSS files for styling different components of the page -->
     <link rel="stylesheet" href="../css/cipher.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/about.css">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="../css/nav-bar.css">
     <link rel="stylesheet" href="../css/sidebar.css">
     <link rel="stylesheet" href="../css/mobile-nav-bar.css">
+    <!-- JavaScript files with defer attribute to ensure they load after the HTML is parsed -->
     <script src="../js/nav/index.js" defer></script>
     <script src="../js/ciphers/AtbashCipher.js" defer></script>
     <script src="../js/ciphers/CipherFactory.js" defer></script>
@@ -21,12 +23,13 @@
 <body>
     <!-- this is taken from https://www.svgrepo.com/svg/522141/hamburger -->
     <nav>
+        <!-- Navigation bar, including a hamburger menu for mobile views -->
         <button class="nav-toggle" aria-label="toggle mobile navigation" onclick="toggleNavItems()">
             <svg width="40px" height="35px" viewBox="0 0 24 24" fill="#0c5e6c">
                 <path d="M3,11h18v2H3v-2zm0-5h18v2H3V6zm0,10h18v2H3v-2z" />
             </svg>
         </button>
-        
+        <!-- Logo section -->
         <div id="logo">
             <a href="../index.html">
                 <img src="../assets/logo.png" alt="About Us" class="logo-image">
@@ -36,6 +39,7 @@
             <li class="nav-item">
                 <a class="nav-item-link" href="../index.html#landing">Home</a>
             </li>
+            <!-- Dropdown for 'Ciphers' section -->
             <li class="nav-item">
                 <div class="dropdown">
                     <div class="dropdown-btn" onclick="toggleDropdown(this)">
@@ -69,7 +73,7 @@
                 </div>
             </li>
         </ul>
-
+        <!-- Mobile navigation items -->
         <ul class="nav-items-mobile">
             <li class="nav-item-mobile">
                 <a class="nav-item-link" href="../index.html">Home</a>
@@ -99,6 +103,7 @@
         </ul>
     </nav>
     <main>
+        <!-- Sidebar for providing additional information -->
         <div class="sidebar">
             <div class="sidebar-content-container">
                 <h2 class="sidebar-title">Summary</h2>
@@ -138,6 +143,7 @@
                     onkeydown="handleKeyPress(event)" role="button" tabindex="0" alt="Expand to read">
             </div>
         </div>
+        <!-- Main content area for interacting with cipher text -->
         <div class="outer-content-container">
             <div class="inner-content-container">
                 <h1 class="cipher-name">Atbash Cipher</h1>
@@ -146,19 +152,21 @@
                     <textarea id="plain-text" class="cipher-textarea"
                         placeholder="Insert here some text to encrypt....&#10;Or press blue button to generate random text"
                         cols="30" rows="10"></textarea>
-
+                    <!-- Generate random words button in plain text -->
                     <button id="gen-random-plain" class="random-cipher-btn" onclick="generateRandomPlainText()">
                         <img src="../assets/random-btn.png" alt="Generate Random Text">
                     </button>
 
                 </div>
                 <div class="cipher-btn-container">
+                    <!-- Encrypt button -->
                     <button id="encrypt-btn" class="cipher-btn" name="atbash-cipher"
                         onclick="encrypt(this)">Encrypt</button>
                     <div id="arrows">
                         <img id="left-arrow" class="arrow-img" src="../assets/curved-arrow.png" alt="Encrypt Arrow">
                         <img id="right-arrow" class="arrow-img" src="../assets/curved-arrow.png" alt="Decrypt Arrow">
                     </div>
+                    <!-- Decrypt button -->
                     <button id="decrypt-btn" class="cipher-btn" name="atbash-cipher"
                         onclick="decrypt(this)">Decrypt</button>
                 </div>
@@ -167,6 +175,7 @@
                     <textarea id="cipher-text" class="cipher-textarea"
                         placeholder="Insert here some text to encrypt....&#10;Or press blue button to generate random text"
                         cols="30" rows="10"></textarea>
+                    <!-- Generate random words button in cipher text -->
                     <button id="gen-random-plain" class="random-cipher-btn"
                         onclick="generateRandomCipherText('atbash-cipher')">
                         <img src="../assets/random-btn.png" alt="Generate Random Text">
@@ -175,6 +184,7 @@
             </div>
         </div>
     </main>
+    <!-- Footer information -->
     <footer class="footer">
         <p>© 2024 Nicole Soto</p>
     </footer>

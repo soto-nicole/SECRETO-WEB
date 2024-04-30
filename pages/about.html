@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linking to external CSS files for styling different components of the page -->
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/about.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/nav-bar.css">
     <link rel="stylesheet" href="../css/mobile-nav-bar.css">
+    <!-- JavaScript files with defer attribute to ensure they load after the HTML is parsed -->
+
     <script src="../js/nav/index.js" defer></script>
     <script src="../js/ciphers/CipherFactory.js" defer></script>
     <script src="../js/index.js" defer></script>
@@ -17,6 +20,7 @@
 </head>
 
 <body class="background-pages">
+    <!-- Navigation bar, including a hamburger menu for mobile views -->
     <nav>
         <button class="nav-toggle" aria-label="toggle mobile navigation" onclick="toggleNavItems()">
             <svg width="40px" height="35px" viewBox="0 0 24 24" fill="#0c5e6c">
@@ -114,6 +118,7 @@
                 <p>
                     Dont't forget to check the design inspirations for this website. Click on the button to go see it!
                 </p>
+                <!-- Link to go to inspiration page -->
                 <a href="../pages/inspiration.html" class="button-link">View Inspirations Here!</a>
             </div>
             <img src="../assets/about-us.png" alt="About the SECRETO project" class="responsive-image">

@@ -17,13 +17,11 @@
     background: #4331c5;
 }
 
-
+/*show yello colour when the cell contains a letter for clarity*/
 .grid-cell-letter {
     background-color: #f0e68c;
     font-size: large;
 }
-
-
 
 .grid-cell {
     border: 1px solid #000; 
@@ -37,8 +35,7 @@
     border-radius: 4px;
 }
 
-
-
+/*Media queries for mobile */
 @media (max-width: 768px) {
     .display-grid-btn {
         width: 100%; 

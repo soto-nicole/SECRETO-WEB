@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linking to external CSS files for styling different components of the page -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/nav-bar.css">
     <link rel="stylesheet" href="css/mobile-nav-bar.css">
     <link rel="stylesheet" href="css/footer.css">
+    <!-- JavaScript files with defer attribute to ensure they load after the HTML is parsed -->
     <script src="js/nav/index.js" defer></script>
     <script src="js/ciphers/CipherFactory.js" defer></script>
     <script src="js/index.js" defer></script>
@@ -15,6 +17,7 @@
 </head>
 
 <body class="gradient-bg">
+    <!-- Nav is the navigation bar which also includes the mobile nav bar -->
     <nav>
         <button class="nav-toggle" aria-label="toggle mobile navigation" onclick="toggleNavItems()">
             <svg width="40px" height="35px" viewBox="0 0 24 24" fill="#0c5e6c">
@@ -92,6 +95,7 @@
             </li>
         </ul>
     </nav>
+    <!-- Main contains the 3 columns of the radial menu for the user to click on the ciphers link thatlead to the page-->
     <main class="justify-centre align-centre flex-wrap">
         <div class="main-page-content">
             <h1 class="main-page-title">Welcome to <span>Secreto</span></h1>
@@ -100,7 +104,9 @@
         </div>
         <div class="main-page-nav">
             <div class="central-nav-container">
+                <!-- Left column contains the ciphers on the left side of the radial menu-->
                 <div id="left-column">
+                    <!-- handleCipherClick will produce the animation before going to the cipher page-->
                     <a href="#" id="dancing-men-cipher" class="column-item"
                         onclick="handleCipherClick(event, './pages/dancingMenCipher.html')">
                         <img src="./assets/dacing-men-icon.png" class="menu-icon" id="dancing-men-icon"
@@ -124,12 +130,12 @@
 
                 </div>
 
+                <!-- Centre column contains the animaiton picture which happens with toggleLock to show unlock state of the lock image-->
                 <div id="centre-column">
                     <img src="./assets/lock.png" id="lock-logo" onclick="toggleLock()" onkeydown="handleKeyPress(event)"
                         tabindex="0" alt="Lock Icon">
-
                 </div>
-
+                <!-- Right column contains the ciphers on the right side of the radial menu-->
                 <div id="right-column">
                     <a href="#" id="rail-fence-cipher" class="column-item"
                         onclick="handleCipherClick(event, './pages/railFenceCipher.html')">
@@ -151,9 +157,9 @@
             </div>
         </div>
     </main>
+    <!-- Footer information-->
     <footer class="footer">
         <p>© 2024 Nicole Soto</p>
     </footer>
 </body>
-
 </html>
