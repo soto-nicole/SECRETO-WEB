@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,13 +17,14 @@
     <script src="../js/index.js" defer></script>
     <title>Morse Code</title>
 </head>
+
 <body>
     <nav>
         <button class="nav-toggle" aria-label="toggle navigation" onclick="toggleNavItems()">
             <span class="hamburger"></span>
         </button>
         <div id="logo">
-            <a href="../index.html">
+            <a href="/index.html">
                 <img src="../assets/logo.png" alt="About Us" class="logo-image">
             </a>
         </div>
@@ -64,7 +66,7 @@
             </li>
         </ul>
 
-        <ul class="nav-items-mobile"> 
+        <ul class="nav-items-mobile">
             <li class="nav-item-mobile">
                 <a class="nav-item-link" href="../index.html">Home</a>
             </li>
@@ -96,39 +98,60 @@
         <div class="sidebar">
             <div class="sidebar-content-container">
                 <h2 class="sidebar-title">Summary</h2>
-                <p class="sidebar-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eos doloribus voluptates doloremque perferendis, quas eligendi sint, animi sapiente quo temporibus repellat fugiat. Nobis sequi id excepturi, quas mollitia perferendis expedita aperiam voluptates non iure dolorum, incidunt labore vitae? Tempora consectetur dignissimos cumque dicta assumenda! Consectetur blanditiis impedit labore tempore eius mollitia, magni nostrum expedita unde architecto magnam ullam vero iusto, numquam quisquam? Quod, culpa eligendi. Dolorem sit, tenetur distinctio quia aspernatur recusandae porro sint voluptatibus sunt? Dolore quibusdam error non autem repellat odit corrupti, optio animi dolor nam maiores ex nostrum cum est quaerat tempore inventore distinctio ut sunt!</p>
+                <p class="sidebar-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eos doloribus
+                    voluptates doloremque perferendis, quas eligendi sint, animi sapiente quo temporibus repellat
+                    fugiat. Nobis sequi id excepturi, quas mollitia perferendis expedita aperiam voluptates non iure
+                    dolorum, incidunt labore vitae? Tempora consectetur dignissimos cumque dicta assumenda! Consectetur
+                    blanditiis impedit labore tempore eius mollitia, magni nostrum expedita unde architecto magnam ullam
+                    vero iusto, numquam quisquam? Quod, culpa eligendi. Dolorem sit, tenetur distinctio quia aspernatur
+                    recusandae porro sint voluptatibus sunt? Dolore quibusdam error non autem repellat odit corrupti,
+                    optio animi dolor nam maiores ex nostrum cum est quaerat tempore inventore distinctio ut sunt!</p>
                 <h2 class="sidebar-title">How it works</h2>
-                <p class="sidebar-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia nobis vero rerum. Voluptatem rerum modi iure sit animi laborum aliquid reprehenderit natus veritatis autem ullam quibusdam, expedita labore sequi aperiam cupiditate omnis saepe est! Blanditiis aliquam et deserunt velit cum voluptatibus. Officiis culpa ad odio, laboriosam debitis reiciendis dolor id suscipit voluptatibus iusto officia exercitationem voluptate molestias magni voluptatem sequi nesciunt, quidem impedit sed tempora? Sit cumque soluta ipsum nemo quod, cupiditate perferendis pariatur animi alias, dolorum expedita suscipit! Culpa!</p>
+                <p class="sidebar-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia nobis vero
+                    rerum. Voluptatem rerum modi iure sit animi laborum aliquid reprehenderit natus veritatis autem
+                    ullam quibusdam, expedita labore sequi aperiam cupiditate omnis saepe est! Blanditiis aliquam et
+                    deserunt velit cum voluptatibus. Officiis culpa ad odio, laboriosam debitis reiciendis dolor id
+                    suscipit voluptatibus iusto officia exercitationem voluptate molestias magni voluptatem sequi
+                    nesciunt, quidem impedit sed tempora? Sit cumque soluta ipsum nemo quod, cupiditate perferendis
+                    pariatur animi alias, dolorum expedita suscipit! Culpa!</p>
             </div>
         </div>
         <div class="learn-more-btn-container">
             <div id="learn-more-btn">
-                <img src="../assets/right-arrow.png" id="learn-more-btn-arrow" onclick="toggleSidebar(this)">
+                <img src="../assets/right-arrow.png" id="learn-more-btn-arrow" onclick="toggleSidebar(this)"
+                    onkeydown="handleKeyPress(event)" role="button" tabindex="0" alt="Expand to read">
             </div>
         </div>
         <div class="outer-content-container">
             <div class="inner-content-container">
                 <h1 class="cipher-name">Morse Code</h1>
                 <div class="cipher-textarea-container">
-                    <div class="cipher-textarea-container-title">Plain Text</div>
-                    
-                    <textarea id="plain-text" class="cipher-textarea" placeholder="Insert here some text to encrypt....&#10;Or press blue button to generate random text" cols="30" rows="10"></textarea>
+                    <label for="plain-text" class="cipher-textarea-container-title">Plain Text</label>
+
+                    <textarea id="plain-text" class="cipher-textarea"
+                        placeholder="Insert here some text to encrypt....&#10;Or press blue button to generate random text"
+                        cols="30" rows="10"></textarea>
                     <button id="gen-random-plain" class="random-cipher-btn" onclick="generateRandomPlainText()">
                         <img src="../assets/random-btn.png" alt="Generate Random Text">
                     </button>
                 </div>
                 <div class="cipher-btn-container">
-                    <button id="encrypt-btn" class="cipher-btn" name="morse-code-cipher" onclick="encrypt(this)">Encrypt</button>
+                    <button id="encrypt-btn" class="cipher-btn" name="morse-code-cipher"
+                        onclick="encrypt(this)">Encrypt</button>
                     <div id="arrows">
-                        <img id="left-arrow" class="arrow-img" src="../assets/curved-arrow.png">
-                        <img id="right-arrow" class="arrow-img" src="../assets/curved-arrow.png">
+                        <img id="left-arrow" class="arrow-img" src="../assets/curved-arrow.png" alt="Encrypt Arrow">
+                        <img id="right-arrow" class="arrow-img" src="../assets/curved-arrow.png" alt="Decrypt Arrow">
                     </div>
-                    <button id="decrypt-btn" class="cipher-btn" name="morse-code-cipher" onclick="decrypt(this)">Decrypt</button>
+                    <button id="decrypt-btn" class="cipher-btn" name="morse-code-cipher"
+                        onclick="decrypt(this)">Decrypt</button>
                 </div>
                 <div class="cipher-textarea-container">
-                    <div class="cipher-textarea-container-title">Cipher Text</div>
-                    <textarea id="cipher-text" class="cipher-textarea" placeholder="Insert here some text to encrypt....&#10;Or press blue button to generate random text" cols="30" rows="10"></textarea>
-                    <button id="gen-random-plain" class="random-cipher-btn" onclick="generateRandomCipherText('morse-code-cipher')">
+                    <label for="cipher-text" class="cipher-textarea-container-title">Cipher Text</label>
+                    <textarea id="cipher-text" class="cipher-textarea"
+                        placeholder="Insert here some text to encrypt....&#10;Or press blue button to generate random text"
+                        cols="30" rows="10"></textarea>
+                    <button id="gen-random-plain" class="random-cipher-btn"
+                        onclick="generateRandomCipherText('morse-code-cipher')">
                         <img src="../assets/random-btn.png" alt="Generate Random Text">
                     </button>
                 </div>
@@ -143,4 +166,5 @@
 <!-- preload -->
 <audio id="dot-audio" src="/SECRETO-WEB/assets/sounds/dot.mp3" preload="auto" style="display: none;"></audio>
 <audio id="dash-audio" src="/SECRETO-WEB/assets/sounds/dash.mp3" preload="auto" style="display: none;"></audio>
+
 </html>

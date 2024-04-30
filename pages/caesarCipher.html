@@ -25,7 +25,7 @@
             <span class="hamburger"></span>
         </button>
         <div id="logo">
-            <a href="../index.html">
+            <a href="/index.html">
                 <img src="../assets/logo.png" alt="About Us" class="logo-image">
             </a>
         </div>
@@ -119,7 +119,8 @@
         </div>
         <div class="learn-more-btn-container">
             <div id="learn-more-btn">
-                <img src="../assets/right-arrow.png" id="learn-more-btn-arrow" onclick="toggleSidebar(this)">
+                <img src="../assets/right-arrow.png" id="learn-more-btn-arrow" onclick="toggleSidebar(this)"
+                    onkeydown="handleKeyPress(event)" role="button" tabindex="0" alt="Expand to read">
             </div>
         </div>
         <div class="outer-content-container">
@@ -134,7 +135,7 @@
             <div class="inner-content-container">
                 <h1 class="cipher-name">Caesar Cipher</h1>
                 <div class="cipher-textarea-container">
-                    <div class="cipher-textarea-container-title">Plain Text</div>
+                    <label for="plain-text" class="cipher-textarea-container-title">Plain Text</label>
 
                     <textarea id="plain-text" class="cipher-textarea"
                         placeholder="Insert here some text to encrypt....&#10;Or press blue button to generate random text"
@@ -147,14 +148,14 @@
                     <button id="encrypt-btn" class="cipher-btn" name="caesar-cipher"
                         onclick="encrypt(this)">Encrypt</button>
                     <div id="arrows">
-                        <img id="left-arrow" class="arrow-img" src="../assets/curved-arrow.png">
-                        <img id="right-arrow" class="arrow-img" src="../assets/curved-arrow.png">
+                        <img id="left-arrow" class="arrow-img" src="../assets/curved-arrow.png" alt="Encrypt Arrow">
+                        <img id="right-arrow" class="arrow-img" src="../assets/curved-arrow.png" alt="Decrypt Arrow">
                     </div>
                     <button id="decrypt-btn" class="cipher-btn" name="caesar-cipher"
                         onclick="decrypt(this)">Decrypt</button>
                 </div>
                 <div class="cipher-textarea-container">
-                    <div class="cipher-textarea-container-title">Cipher Text</div>
+                    <label for="cipher-text" class="cipher-textarea-container-title">Cipher Text</label>
                     <textarea id="cipher-text" class="cipher-textarea"
                         placeholder="Insert here some text to encrypt....&#10;Or press blue button to generate random text"
                         cols="30" rows="10"></textarea>

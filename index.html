@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
     <script src="js/index.js" defer></script>
     <title>Home</title>
 </head>
+
 <body class="gradient-bg">
     <nav>
         <button class="nav-toggle" aria-label="toggle navigation" onclick="toggleNavItems()">
@@ -60,7 +62,7 @@
             </li>
         </ul>
 
-        <ul class="nav-items-mobile"> 
+        <ul class="nav-items-mobile">
             <li class="nav-item-mobile">
                 <a class="nav-item-link" href="../index.html">Home</a>
             </li>
@@ -91,44 +93,55 @@
     <main class="justify-centre align-centre flex-wrap">
         <div class="main-page-content">
             <h1 class="main-page-title">Welcome to <span>Secreto</span></h1>
-            <p class="main-page-description">Start exploring the enigma of cryptography using this platform by selecting one of the following six ciphers, each unveiling secrets on their dedicated page!</p>
+            <p class="main-page-description">Start exploring the enigma of cryptography using this platform by selecting
+                one of the following six ciphers, each unveiling secrets on their dedicated page!</p>
         </div>
         <div class="main-page-nav">
             <div class="central-nav-container">
-                <div id="left-column">                    
-                    <a href="#" id="dancing-men-cipher" class="column-item" onclick="handleCipherClick(event, './pages/dancingMenCipher.html')">
-                        <img src="./assets/dacing-men-icon.png" class="menu-icon" id="dancing-men-icon" alt="Dancing Men Cipher">
+                <div id="left-column">
+                    <a href="#" id="dancing-men-cipher" class="column-item"
+                        onclick="handleCipherClick(event, './pages/dancingMenCipher.html')">
+                        <img src="./assets/dacing-men-icon.png" class="menu-icon" id="dancing-men-icon"
+                            alt="Dancing Men Cipher">
                         <span>Dancing Men Cipher</span>
                     </a>
 
-                    <a href="#" id="star-wars-cipher" class="column-item" onclick="handleCipherClick(event, './pages/starWarsCipher.html')">
-                        <img src="./assets/star-wars-icon.png" class="menu-icon" id="star-wars-icon" alt="Star Wars Cipher">
+                    <a href="#" id="star-wars-cipher" class="column-item"
+                        onclick="handleCipherClick(event, './pages/starWarsCipher.html')">
+                        <img src="./assets/star-wars-icon.png" class="menu-icon" id="star-wars-icon"
+                            alt="Star Wars Cipher">
                         <span>Star Wars Cipher</span>
                     </a>
 
-                    <a href="#" id="morse-code" class="column-item" onclick="handleCipherClick(event, './pages/morseCode.html')">
-                        <img src="./assets/morse-code-icon.png" class="menu-icon" id="morse-code" alt="Morse CodeCipher">
+                    <a href="#" id="morse-code" class="column-item"
+                        onclick="handleCipherClick(event, './pages/morseCode.html')">
+                        <img src="./assets/morse-code-icon.png" class="menu-icon" id="morse-code"
+                            alt="Morse CodeCipher">
                         <span>Morse Code </span>
                     </a>
-                    
+
                 </div>
 
                 <div id="centre-column">
-                    <!-- <img src="./assets/lock.png" id="lock-logo" onclick="toggleLock()" alt="Lock Icon"> -->
-                    <img src="./assets/lock.png" id="lock-logo" onclick="toggleLock()" onkeydown="handleKeyPress(event)" tabindex="0" alt="Lock Icon">
+                    <img src="./assets/lock.png" id="lock-logo" onclick="toggleLock()" onkeydown="handleKeyPress(event)"
+                        tabindex="0" alt="Lock Icon">
 
                 </div>
 
                 <div id="right-column">
-                    <a href="#" id="rail-fence-cipher" class="column-item" onclick="handleCipherClick(event, './pages/railFenceCipher.html')">
-                        <img src="./assets/rail-fence-icon.png" class="menu-icon" id="rail-fence-cipher" alt="Rail Fence Cipher">
+                    <a href="#" id="rail-fence-cipher" class="column-item"
+                        onclick="handleCipherClick(event, './pages/railFenceCipher.html')">
+                        <img src="./assets/rail-fence-icon.png" class="menu-icon" id="rail-fence-cipher"
+                            alt="Rail Fence Cipher">
                         <span>Rail Fence Cipher </span>
                     </a>
-                    <a href="#" id="caesar-cipher" class="column-item" onclick="handleCipherClick(event, './pages/caesarCipher.html')">
+                    <a href="#" id="caesar-cipher" class="column-item"
+                        onclick="handleCipherClick(event, './pages/caesarCipher.html')">
                         <img src="./assets/caesar-icon.png" class="menu-icon" id="caesar-cipher" alt="Caesar Cipher">
                         <span>Caesar Cipher </span>
                     </a>
-                    <a href="#" id="atbash-cipher" class="column-item" onclick="handleCipherClick(event, './pages/atbashCipher.html')">
+                    <a href="#" id="atbash-cipher" class="column-item"
+                        onclick="handleCipherClick(event, './pages/atbashCipher.html')">
                         <img src="./assets/atbash-icon.png" class="menu-icon" id="atbash-cipher" alt="Atbash Cipher">
                         <span>Atbash Cipher </span>
                     </a>
@@ -140,4 +153,5 @@
         <p>© 2024 Nicole Soto</p>
     </footer>
 </body>
+
 </html>

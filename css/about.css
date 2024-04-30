@@ -62,6 +62,18 @@
     text-align: justify;
     padding: 0 10px; 
 }
+/* new for changes */
+.main-text p, .main-text h1, .main-text h2 {
+    font-weight: normal;
+    margin: 10px 20px; 
+    line-height: 1.6;
+    text-align: left;
+    padding: 0 10px; 
+}
+.main-text h2 {
+    margin-top: 40px;
+    font-weight: bold;
+}
 
 .main-text h1 {
     background-color: rgba(203, 187, 52, 0.5);
@@ -101,7 +113,7 @@
     font-weight: normal;
     margin: 10px 20px; 
     line-height: 1.6;
-    text-align: justify;
+    text-align: left;
     padding: 0 10px; 
 }
 
