@@ -101,22 +101,49 @@
         <div class="sidebar">
             <div class="sidebar-content-container">
                 <h2 class="sidebar-title">Summary</h2>
-                <p class="sidebar-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eos doloribus
-                    voluptates doloremque perferendis, quas eligendi sint, animi sapiente quo temporibus repellat
-                    fugiat. Nobis sequi id excepturi, quas mollitia perferendis expedita aperiam voluptates non iure
-                    dolorum, incidunt labore vitae? Tempora consectetur dignissimos cumque dicta assumenda! Consectetur
-                    blanditiis impedit labore tempore eius mollitia, magni nostrum expedita unde architecto magnam ullam
-                    vero iusto, numquam quisquam? Quod, culpa eligendi. Dolorem sit, tenetur distinctio quia aspernatur
-                    recusandae porro sint voluptatibus sunt? Dolore quibusdam error non autem repellat odit corrupti,
-                    optio animi dolor nam maiores ex nostrum cum est quaerat tempore inventore distinctio ut sunt!</p>
-                <h2 class="sidebar-title">How it works</h2>
-                <p class="sidebar-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia nobis vero
-                    rerum. Voluptatem rerum modi iure sit animi laborum aliquid reprehenderit natus veritatis autem
-                    ullam quibusdam, expedita labore sequi aperiam cupiditate omnis saepe est! Blanditiis aliquam et
-                    deserunt velit cum voluptatibus. Officiis culpa ad odio, laboriosam debitis reiciendis dolor id
-                    suscipit voluptatibus iusto officia exercitationem voluptate molestias magni voluptatem sequi
-                    nesciunt, quidem impedit sed tempora? Sit cumque soluta ipsum nemo quod, cupiditate perferendis
-                    pariatur animi alias, dolorum expedita suscipit! Culpa!</p>
+                <p class="sidebar-content">The Shift (or Caesar) Cipher is a type of <strong>substitution</strong>
+                    cipher
+                    that offers slightly more security than the Atbash Cipher but remains relatively easy to break by
+                    modern standards. This cipher was historically used by Julius Caesar to send secure messages, as
+                    noted by Suetonius. Caesar encrypted messages by shifting letters of the alphabet; for example, with
+                    a shift of three, "A" would be replaced by "D", "B" by "E", and so on.</br> This technique
+                    effectively
+                    obscured messages from adversaries. The cipher’s strength is slightly enhanced by the use of a key,
+                    which is the number of positions each letter is shifted. While still not highly secure, this method
+                    was more robust than the Atbash Cipher due to the variability of the shift, exemplified by Caesar’s
+                    own use of a shift of three..<br>
+                </p>
+                <img src="../assets/caesar-picture.png" alt="Caesar Cipher Picture" class="responsive-img">
+                <p class="important-content">
+                    <strong>Key selection</strong> Choose any number from 1 to 25. Remember, the security of the Caesar Cipher doesn't
+                    depend on the complexity of the key but rather on keeping it secret from unintended recipients!.</br>
+                    <strong>Consistency:</strong> Use the same key for encrypting and decrypting your message. If the key used to encrypt
+                    the message is not the same as the one used to decrypt it, the original text will not be recovered
+                    correctly.
+                </p>
+
+                <h2 class="sidebar-title">How it works: Encryption</h2>
+                <p class="sidebar-content">Encryption using the Shift Cipher involves creating a ciphertext alphabet by
+                    shifting the alphabet a specific number of places to the left, as determined by the key. For
+                    instance, a shift of 1 moves "A" to the end of the alphabet, and a shift of 15 would rearrange "A"
+                    to the position of "P". This shift creates a new order of letters, which is then used to encode the
+                    plaintext. For example, using a key of 3, the plaintext "julius caesar" would be encrypted to
+                    "MXOLXV FDHVDU", by matching each letter to its shifted counterpart in the ciphertext alphabet.</p>
+                <h2 class="sidebar-title">How it works: Decryption</h2>
+                <p class="sidebar-content">Decryption is equally straightforward and involves reversing the encryption
+                    process using the same shifted alphabet. If the ciphertext received is "PDUFXV EUXWXV" and it’s
+                    known to have been encrypted with a key of 3, the decryption process would simply require aligning
+                    the ciphertext with the shifted alphabet to convert it back to plaintext, revealing "marcus brutus".
+                    This decryption uses the same table used for encryption, making the process efficient but vulnerable
+                    to brute force attacks, as only 26 possible shifts exist, each easily tested until coherent text
+                    emerges.</h2>
+                <p class="sidebar-content">
+                    [1] Adriano, <a
+                        href="https://caesarcipher.net/caesar-cipher-what-it-is-and-how-it-works/?utm_content=cmp-true"
+                        target="_blank">"Caesar Cipher: What It Is and How It Works"</a> - Online source.<br>
+                    [1] Cryptop Corner, <a href="https://crypto.interactive-maths.com/caesar-shift-cipher.html"
+                        target="_blank">"Caesar Cipher"</a> - Online source.
+                </p>
             </div>
         </div>
         <div class="learn-more-btn-container">
@@ -130,7 +157,7 @@
             <div id="error-modal" class="modal">
                 <div class="modal-content">
                     <span class="close-button">×</span>
-                    <p>Please insert a key value between 0 and 26</p>
+                    <p>Please insert a key value between 1 and 25!</p>
                 </div>
             </div>
 
