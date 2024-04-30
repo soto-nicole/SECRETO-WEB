@@ -102,17 +102,53 @@
         <div class="sidebar">
             <div class="sidebar-content-container">
                 <h2 class="sidebar-title">Summary</h2>
-                <p class="sidebar-content">The rail fence cipher (also called a zigzag cipher) is a classical type of
-                    transposition cipher. It derives its name from the manner in which encryption is performed, in
-                    analogy to a fence built with horizontal rails.</p>
-                <h2 class="sidebar-title">How it works</h2>
-                <p class="sidebar-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia nobis vero
-                    rerum. Voluptatem rerum modi iure sit animi laborum aliquid reprehenderit natus veritatis autem
-                    ullam quibusdam, expedita labore sequi aperiam cupiditate omnis saepe est! Blanditiis aliquam et
-                    deserunt velit cum voluptatibus. Officiis culpa ad odio, laboriosam debitis reiciendis dolor id
-                    suscipit voluptatibus iusto officia exercitationem voluptate molestias magni voluptatem sequi
-                    nesciunt, quidem impedit sed tempora? Sit cumque soluta ipsum nemo quod, cupiditate perferendis
-                    pariatur animi alias, dolorum expedita suscipit! Culpa!</p>
+                <p class="sidebar-content">The Rail Fence Cipher is a type of transposition cipher that rearranges the
+                    order of letters in a plaintext message based on a <strong>key</strong> that determines the number
+                    of rows used in
+                    the encryption process. This cipher derives its name from the way letters are written in a zigzag
+                    pattern, resembling a rail fence. It offers a basic level of security by using a key to vary the
+                    number of rows, making the encryption slightly more challenging to decipher without knowledge of the
+                    key.<br>
+                </p>
+                <h2 class="sidebar-title">How it works: Encryption</h2>
+                <p class="sidebar-content">
+                    Begin by writing the message in a zigzag pattern across multiple rows. The number of rows is
+                    determined by the key.
+                    For example, with a key of 3, you write
+                    the first letter in the top row, the second in the second row, and continue in a downward fashion
+                    until you reach the bottom row. Then, the direction changes, and you continue placing letters
+                    diagonally upwards until reaching the top row again, repeating this pattern until the entire message
+                    is written out.<br>
+                    Once the message is laid out in this zigzag pattern, the ciphertext is
+                    formed by reading each row sequentially from top to bottom. For example, if the plaintext is "defend
+                    the east wall" and the key is 3, the letters are written in three rows with zigzagging lines, and
+                    the ciphertext is read off as the sequence of letters from each row.</p>
+                <img src="../assets/rail-picture.png" alt="Rail Cipher Picture" class="responsive-img">
+
+                <h2 class="sidebar-title">How it works: Decryption</h2>
+                <p class="sidebar-content">To decrypt the message, you need to reconstruct the zigzag pattern used
+                    during encryption. This involves knowing the key (number of rails) used to encrypt the message.
+                    First, estimate or determine how many letters occupy each row by knowing the total length of the
+                    ciphertext and the encryption key.
+                    Start placing the ciphertext letters back into the zigzag pattern. Begin
+                    with the top row and fill it with the correct number of letters, then proceed to the next row until
+                    all rows are filled according to the pattern established during encryption. Once the zigzag grid is
+                    filled with the ciphertext letters, read the message
+                    by following the zigzag pattern from the start to the end of the grid to reconstruct the original
+                    plaintext message!.</p>
+                <p class="important-content">
+                    If this is not clear, you can always try this cipher out and click the button "display grid" that is
+                    in the <strong>key container</strong>. This will display the grid of the text you have
+                    encrypted!<br>
+                    Note that in this code we are not removing the empty space, so whatever empty space is inputted it
+                    will count as a character
+                </p>
+                <h2 class="sidebar-title">References</h2>
+                <p class="sidebar-content">
+                    [1] Wikipedia, <a href="https://en.wikipedia.org/wiki/Rail_fence_cipher" target="_blank">"Rail Fence Cipher"</a> - Online source.<br>
+                    [1] Cryptop Corner, <a href="https://crypto.interactive-maths.com/rail-fence-cipher.html"
+                        target="_blank">"Rail Fence Cipher"</a> - Online source.
+                </p>
             </div>
         </div>
         <div class="learn-more-btn-container">
