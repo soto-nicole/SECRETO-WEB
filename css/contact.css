@@ -16,3 +16,13 @@
     height: 40px; 
     width: auto; 
 }
+
+.github-link {
+    color: #0c5e6c; 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+.github-link:hover {
+    text-decoration: underline; 
+}

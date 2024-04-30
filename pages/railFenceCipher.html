@@ -28,7 +28,7 @@
             <span class="hamburger"></span>
         </button>
         <div id="logo">
-            <a href="../index.html">
+            <a href="/index.html">
                 <img src="../assets/logo.png" alt="About Us" class="logo-image">
             </a>
         </div>
@@ -102,7 +102,9 @@
         <div class="sidebar">
             <div class="sidebar-content-container">
                 <h2 class="sidebar-title">Summary</h2>
-                <p class="sidebar-content">The rail fence cipher (also called a zigzag cipher) is a classical type of transposition cipher. It derives its name from the manner in which encryption is performed, in analogy to a fence built with horizontal rails.</p>
+                <p class="sidebar-content">The rail fence cipher (also called a zigzag cipher) is a classical type of
+                    transposition cipher. It derives its name from the manner in which encryption is performed, in
+                    analogy to a fence built with horizontal rails.</p>
                 <h2 class="sidebar-title">How it works</h2>
                 <p class="sidebar-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia nobis vero
                     rerum. Voluptatem rerum modi iure sit animi laborum aliquid reprehenderit natus veritatis autem
@@ -115,7 +117,8 @@
         </div>
         <div class="learn-more-btn-container">
             <div id="learn-more-btn">
-                <img src="../assets/right-arrow.png" id="learn-more-btn-arrow" onclick="toggleSidebar(this)">
+                <img src="../assets/right-arrow.png" id="learn-more-btn-arrow" onclick="toggleSidebar(this)"
+                    onkeydown="handleKeyPress(event)" role="button" tabindex="0" alt="Expand to read">
             </div>
         </div>
 
@@ -129,7 +132,7 @@
             <div class="inner-content-container">
                 <h1 class="cipher-name">Rail Fence Cipher</h1>
                 <div class="cipher-textarea-container">
-                    <div class="cipher-textarea-container-title">Plain Text</div>
+                    <label for="plain-text" class="cipher-textarea-container-title">Plain Text</label>
 
                     <textarea id="plain-text" class="cipher-textarea"
                         placeholder="Insert here some text to encrypt....&#10;Or press blue button to generate random text"
@@ -142,14 +145,14 @@
                     <button id="encrypt-btn" class="cipher-btn" name="rail-fence-cipher"
                         onclick="encrypt(this)">Encrypt</button>
                     <div id="arrows">
-                        <img id="left-arrow" class="arrow-img" src="../assets/curved-arrow.png">
-                        <img id="right-arrow" class="arrow-img" src="../assets/curved-arrow.png">
+                        <img id="left-arrow" class="arrow-img" src="../assets/curved-arrow.png" alt="Encrypt Arrow">
+                        <img id="right-arrow" class="arrow-img" src="../assets/curved-arrow.png" alt="Decrypt Arrow">
                     </div>
                     <button id="decrypt-btn" class="cipher-btn" name="rail-fence-cipher"
                         onclick="decrypt(this)">Decrypt</button>
                 </div>
                 <div class="cipher-textarea-container">
-                    <div class="cipher-textarea-container-title">Cipher Text</div>
+                    <label for="cipher-text" class="cipher-textarea-container-title">Cipher Text</label>
                     <textarea id="cipher-text" class="cipher-textarea"
                         placeholder="Insert here some text to encrypt....&#10;Or press blue button to generate random text"
                         cols="30" rows="10"></textarea>
@@ -159,11 +162,12 @@
                     </button>
                 </div>
             </div>
-        </div>        
+        </div>
         <div class="cipher-input-container">
             <label for="key-input">Rail Number:</label>
             <input type="number" id="key-input" class="cipher-input" min="2" value="3">
-            <button id="display-grid-btn" class="cipher-btn display-grid-btn" onclick="showGridModal()">Display Grid</button>
+            <button id="display-grid-btn" class="cipher-btn display-grid-btn" onclick="showGridModal()">Display
+                Grid</button>
         </div>
         <div id="grid-modal" class="modal">
             <div class="modal-content">

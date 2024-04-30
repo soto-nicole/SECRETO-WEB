@@ -24,7 +24,7 @@
 
 .dropdown-btn.active, 
 .nav-item-link.active {
-    background-color: #3EB4C8; 
+    background-color: #0c5e6c; 
     color: white; 
     padding: 3px 10px; 
     border-radius: 5px; 
@@ -95,7 +95,7 @@ nav {
     margin-left: 0.5rem;
     padding: 0.3rem 0.5rem;
     color: #ffffff;
-    background: #3EB4C8;
+    background: #0c5e6c;;
     font-size: 1.4rem;
     border-radius: 0 0.7rem 0.7rem 0;
 }
