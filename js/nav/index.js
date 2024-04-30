@@ -46,3 +46,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+
+function toggleNavItems() {
+    var body = document.body;
+    var navItems = document.querySelector('.nav-items-mobile');
+    navItems.classList.toggle('show-nav-items'); 
+    body.classList.toggle('lock-scroll');  
+}

@@ -19,10 +19,14 @@
 </head>
 
 <body>
+    <!-- this is taken from https://www.svgrepo.com/svg/522141/hamburger -->
     <nav>
-        <button class="nav-toggle" aria-label="toggle navigation" onclick="toggleNavItems()">
-            <span class="hamburger"></span>
+        <button class="nav-toggle" aria-label="toggle mobile navigation" onclick="toggleNavItems()">
+            <svg width="40px" height="35px" viewBox="0 0 24 24" fill="#0c5e6c">
+                <path d="M3,11h18v2H3v-2zm0-5h18v2H3V6zm0,10h18v2H3v-2z" />
+            </svg>
         </button>
+        
         <div id="logo">
             <a href="../index.html">
                 <img src="../assets/logo.png" alt="About Us" class="logo-image">
