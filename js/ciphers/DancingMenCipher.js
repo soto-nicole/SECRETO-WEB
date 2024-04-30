@@ -1,3 +1,6 @@
+/*
+Dancing Men class implements the Dancing men ciphe
+*/
 class DancingMenCipher {
 
 

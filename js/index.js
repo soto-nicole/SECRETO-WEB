@@ -1,5 +1,11 @@
+// Class responsible for creating cipher objects based on a specified type.
+// This factory class is crucial for the instantiation of different cipher classes dynamically based on the user's choice.
 const cipherFactory = new CipherFactory()
 
+
+// Asynchronous function to encrypt text. It retrieves user input, determines the cipher to use based on the clicked element,
+// sets the cipher shift if necessary, performs the encryption, and handles special actions like playing sounds for Morse code
+// or invoking custom actions for the Star Wars cipher.
 const encrypt = async (element) => {
     try {
         console.log("Encrypt function called");
@@ -31,7 +37,8 @@ const encrypt = async (element) => {
         console.error("Encryption error:", error);
     }
 };
-
+// Asynchronous function to decrypt text. It retrieves encrypted text from the user, determines the cipher to use based on the clicked element,
+// sets the cipher shift if necessary, performs the decryption, and updates the UI to show the decrypted text.
 const decrypt = async (element) => {
     try {
         console.log("Decrypt function called");
@@ -56,12 +63,32 @@ const decrypt = async (element) => {
     }
 };
 
+// Function to toggle UI elements for displaying or hiding the sidebar.
+// This provides a dynamic UI experience, allowing the sidebar to be shown or hidden based on user interaction.
 const toggleSidebar = (element) => {
     element.classList.toggle("mirror-on-x-axis")
     element.parentElement.parentElement.classList.toggle("shift-left")
     element.parentElement.parentElement.parentElement.children[0].classList.toggle("show-sidebar")
 }
 
+// Function to show a modal for user interaction, particularly used when an error occurs or specific user feedback is required.
+function showModal() {
+    const modal = document.getElementById("error-modal");
+    modal.style.display = "block";
+    
+    const closeButton = document.querySelector(".close-button");
+    closeButton.onclick = function() {
+        modal.style.display = "none";
+    };
+    
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    };
+}
+
+//Show grid for rail fence
 function showGridModal() {
     let modal = document.getElementById('grid-modal');
     modal.style.display = 'block';
@@ -73,9 +100,8 @@ function closeGridModal() {
     modal.style.display = 'none';
 }
 
-
-
-//Generates 10 random words when the btn is clicked by connecting to the random world API
+// Asynchronous function to generate random plaintext by fetching words from an API.
+// It updates the plaintext input field with these words or displays an error message if the fetch fails.
 //https://dmitripavlutin.com/javascript-fetch-async-await/
 async function generateRandomPlainText() {
     const apiUrl = 'https://random-word-api.herokuapp.com/word?number=10';
@@ -89,13 +115,8 @@ async function generateRandomPlainText() {
     }
 }
 
-/**
- * This function fetches 10 random words, joins them into a single string, and encrypts them for the cipeh text, which uses a specified cipher type
- * depending on the page it is int. The encrypted text is then displayed with the id "cipher text". 
- * In case the encryption fails, which happened once while the server was down, an error message is displayed/ 
- *
- * @param {string} cipherType - The type of cipher to use for encrypting the text.
- */
+// Asynchronous function to generate random ciphertext by fetching words from an API and encrypting them using a specified cipher.
+// It displays the encrypted text or an error message in the ciphertext input field.
 async function generateRandomCipherText(cipherType) {
     const apiUrl = 'https://random-word-api.herokuapp.com/word?number=10';
     try {
@@ -114,13 +135,7 @@ async function generateRandomCipherText(cipherType) {
     }
 }
 
-/**Animation for the lock logo by rotating it in the landing page every time a cipher is clicked
- * The default action is going straight to the page where the link is for each cipher in the radial menu, however this function prevents this event
- * by first animating the lock logo, toggling from a lock to unlock state. After the animation finishes then the user is taking to the 
- * required url
- * @param {Event} event - The event object associated with the click, used to prevent the default action.
- * @param {string} url - The URL to navigate to after the animation and state toggle are complete.
- */
+// Event handler for cipher clicks, providing an animated transition (lock logo rotation) and redirecting to a specified URL after the animation.
 function handleCipherClick(event, url) {
     event.preventDefault(); 
 
@@ -148,32 +163,11 @@ function handleKeyPress(event) {
 }
 
 
-function showModal() {
-    const modal = document.getElementById("error-modal");
-    modal.style.display = "block";
-    
-    const closeButton = document.querySelector(".close-button");
-    closeButton.onclick = function() {
-        modal.style.display = "none";
-    };
-    
-    window.onclick = function(event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    };
-}
 
-/**
- * Initiates the reading of encrypted text using the Web Speech API's speech synthesis capabilities.
- * This function ensures that the available voices are loaded and selects the most appropriate voice,which in this case by modifiying the 
- * pitch and rate of the voice I am attempting to make it sound like a robot - this is only used in the star wars cipher
- *
- * @param {string} encryptedText - The text to be spoken, expected to be in encrypted format
- * 
- * [reference: https://www.heartinternet.uk/blog/5-things-you-didnt-know-a-browser-could-do/]
- */
-
+// Initiates the reading of encrypted text using the Web Speech API's speech synthesis capabilities.
+// This function ensures that the available voices are loaded and selects the most appropriate voice,which in this case by modifiying the 
+// pitch and rate of the voice I am attempting to make it sound like a robot - this is only used in the star wars cipher
+// [reference: https://www.heartinternet.uk/blog/5-things-you-didnt-know-a-browser-could-do/]
 function readCipherText(encryptedText) {
     function setupAndSpeak(voices, text) {
         const utterance = new SpeechSynthesisUtterance(text);
