@@ -73,17 +73,6 @@ function closeGridModal() {
     modal.style.display = 'none';
 }
 
-document.getElementById('display-grid-btn').addEventListener('click', function() {
-    cipher.displayGrid(document.getElementById('plain-text').value);
-});
-document.getElementsByClassName('close-button')[1].addEventListener('click', closeGridModal);
-
-
-
-
-
-
-
 
 
 //Generates 10 random words when the btn is clicked by connecting to the random world API
