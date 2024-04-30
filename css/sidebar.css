@@ -53,6 +53,16 @@
     font-weight: normal;
 }
 
+.important-content {
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    background: #f58e8e;
+    line-height: 22px;
+    border-radius: 10px;
+    font-weight: normal;
+}
+
 /*Styling for arrow button, this has an pulsation animation to attract user's attention*/
 .learn-more-btn-container {
     display: flex;
